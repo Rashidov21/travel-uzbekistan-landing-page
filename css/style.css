@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-color: #ffefeb;
+}
+
+a {
+    text-decoration: none;
+    color: #e0e1f3;
+}
+
+section {
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+nav {
+    background-color: transparent;
+    position: absolute;
+    z-index: 9999;
+    width: 100%;
+}
+
+.container {
+    max-width: 1600px;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.center {
+    text-align: center;
+}
+
+.text-muted {
+    color: #2d3379;
+}
+
+h1,
+h2,
+h3 {
+    color: #22265a;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+}
+
+.navbar .nav-item {
+    margin: 0px 50px;
+    background-color: transparent;
+}
+
+.banner {
+    width: 100%;
+    min-height: 550px;
+    background-blend-mode: darken;
+    background-position: bottom center;
+    background-color: #b3b6d8;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+}
+
+.banner .banner-title {
+    display: flex;
+    text-align: center;
+    vertical-align: middle;
+    min-height: 400px;
+    align-items: center;
+    justify-content: center;
+    font-size: 3.5em;
+    color: #e0e1f3;
+    font-weight: bold;
+}
+
+.menu {
+    float: right;
+    margin: 20px 50px;
+    display: none;
+}
+
+.menu a i {
+    font-size: 1.2em;
+}
+
+.tours {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 20px;
+}
+
+.tours .tour {
+    min-width: 200px;
+    min-height: 150px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: .5rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.tour-name {
+    font-size: 1.2em;
+    color: #e0e1f3;
+    font-weight: bold;
+}
+
+.tour-price {
+    font-size: 1.2em;
+    color: #2d3379;
+    font-weight: 400;
+}
+
+.splide {
+    top: -50px;
+}
+
+#tours-area {
+    margin-top: -130px;
+}

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./css/splide.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <title>Chorvoq</title>
+</head>
+
+<body>
+    <nav>
+        <ul class="navbar">
+            <li class="nav-item">
+                <a href="#" class="nav-link">Bosh sahifa</a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">Turlar</a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">Biz haqimizda</a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">Aloqa</a>
+            </li>
+        </ul>
+        <div class="menu">
+            <a href="#" class="menu-btn">
+                <i class="fas fa-bars"></i>
+            </a>
+        </div>
+    </nav>
+
+    <section class="splide" aria-label="Splide Basic HTML Example">
+        <div class="splide__track">
+            <ul class="splide__list">
+                <li class="splide__slide">
+                    <div class="banner" style="background-image: url(../img/img4-min.jpg);">
+                        <div class="banner-title">
+                            Chorvoqga bir <br> kelib keting!
+                        </div>
+                    </div>
+                </li>
+                <li class="splide__slide">
+                    <div class="banner" style="background-image: url(../img/img1-min.jpg);">
+                        <div class="banner-title">
+                            Sahroda dam <br> olib keting!
+                        </div>
+                    </div>
+                </li>
+                <li class="splide__slide">
+                    <div class="banner" style="background-image: url(../img/img2-min.jpg);">
+                        <div class="banner-title">
+                            Tog'ga bir <br> chiqib keting!
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <main>
+        <section id="tours-area">
+            <div class="container">
+                <div class="center">
+                    <h5>Bizning TOP turlarimiz</h5>
+                    <h1>O'zingizga yoqgan turni tanlang</h1>
+                </div>
+
+                <div class="tours">
+                    <div class="tour" style="background-image: url(./img/img3-min.jpg);">
+                        <div class="center">
+                            <div class="tour-name">Buxoro</div>
+                            <div class="tour-price">$450</div>
+                        </div>
+                    </div>
+                    <div class="tour" style="background-image: url(./img/img2-min.jpg);">
+                        <div class="center">
+                            <div class="tour-name">Buxoro</div>
+                            <div class="tour-price">$450</div>
+                        </div>
+                    </div>
+                    <div class="tour" style="background-image: url(./img/img1-min.jpg);">
+                        <div class="center">
+                            <div class="tour-name">Buxoro</div>
+                            <div class="tour-price">$450</div>
+                        </div>
+                    </div>
+                    <div class="tour" style="background-image: url(./img/img4-min.jpg);">
+                        <div class="center">
+                            <div class="tour-name">Buxoro</div>
+                            <div class="tour-price">$450</div>
+                        </div>
+                    </div>
+                    <div class="tour" style="background-image: url(./img/img3-min.jpg);">
+                        <div class="center">
+                            <div class="tour-name">Buxoro</div>
+                            <div class="tour-price">$450</div>
+                        </div>
+                    </div>
+                    <div class="tour" style="background-image: url(./img/img4-min.jpg);">
+                        <div class="center">
+                            <div class="tour-name">Buxoro</div>
+                            <div class="tour-price">$450</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="./js/splide.min.js"></script>
+    <script>
+        new Splide('.splide', {
+            type: 'loop',
+            perPage: 1,
+            width: "100%",
+            height: 650,
+            pagination: false,
+            // arrows: false
+
+        }).mount();
+    </script>
+</body>
+
+</html>
