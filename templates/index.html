@@ -111,7 +111,7 @@
             <section class="home-slider-section">
                 <div class="home-slider">
                     <div class="home-banner-items">
-                        <div class="banner-inner-wrap" style="background-image: url({% static 'assets/images/slider-banner-1.jpg' %});"></div>
+                        <div class="banner-inner-wrap" id="xaj"></div>
                         <div class="banner-content-wrap">
                             <div class="container">
                                 <div class="banner-content text-center">
@@ -124,7 +124,7 @@
                         <div class="overlay"></div>
                     </div>
                     <div class="home-banner-items">
-                        <div class="banner-inner-wrap" style="background-image: url({% static 'assets/images/slider-banner-2.jpg' %});"></div>
+                        <div class="banner-inner-wrap" id="uzb"></div>
                         <div class="banner-content-wrap">
                             <div class="container">
                                 <div class="banner-content text-center">
@@ -139,44 +139,14 @@
                 </div>
             </section>
             <!-- slider html start -->
-            <!-- Home search field html start -->
-            <div class="trip-search-section shape-search-section">
-                <div class="slider-shape"></div>
-                <div class="container">
-                    <div class="trip-search-inner white-bg d-flex">
-                        <div class="input-group">
-                            <label> Search Destination* </label>
-                            <input type="text" name="s" placeholder="Enter Destination">
-                        </div>
-                        <div class="input-group">
-                            <label> Pax Number* </label>
-                            <input type="text" name="s" placeholder="No.of People">
-                        </div>
-                        <div class="input-group width-col-3">
-                            <label> Checkin Date* </label>
-                            <i class="far fa-calendar"></i>
-                            <input class="input-date-picker" type="text" name="s" placeholder="MM / DD / YY" autocomplete="off" readonly="readonly">
-                        </div>
-                        <div class="input-group width-col-3">
-                            <label> Checkout Date* </label>
-                            <i class="far fa-calendar"></i>
-                            <input class="input-date-picker" type="text" name="s" placeholder="MM / DD / YY" autocomplete="off" readonly="readonly">
-                        </div>
-                        <div class="input-group width-col-3">
-                            <label class="screen-reader-text"> Search </label>
-                            <input type="submit" name="travel-search" value="INQUIRE NOW">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- search search field html end -->
+
             <section class="destination-section">
                 <div class="container">
                     <div class="section-heading">
                         <div class="row align-items-end">
                             <div class="col-lg-7">
-                                <h5 class="dash-style">POPULAR DESTINATION</h5>
-                                <h2>TOP NOTCH DESTINATION</h2>
+                                <h5 class="dash-style">Ommabop turlarimiz</h5>
+                                <h2>MASHXUR TURLAR</h2>
                             </div>
                             <div class="col-lg-5">
                                 <div class="section-disc">
@@ -192,14 +162,14 @@
                                     <div class="col-sm-6">
                                         <div class="desti-item overlay-desti-item">
                                             <figure class="desti-image">
-                                                <img src="{% static 'assets/images/img1.jpg' %}" alt="">
+                                                <img src="{% static 'assets/images/322x555mekkah.jpg' %}" alt="">
                                             </figure>
                                             <div class="meta-cat bg-meta-cat">
-                                                <a href="#">THAILAND</a>
+                                                <a href="#">Xaj ibodati</a>
                                             </div>
                                             <div class="desti-content">
                                                 <h3>
-                                                    <a href="#">Disney Land</a>
+                                                    <a href="#">Makka, Madina</a>
                                                 </h3>
                                                 <div class="rating-start" title="Rated 5 out of 4">
                                                     <span style="width: 53%"></span>
@@ -210,14 +180,14 @@
                                     <div class="col-sm-6">
                                         <div class="desti-item overlay-desti-item">
                                             <figure class="desti-image">
-                                                <img src="{% static 'assets/images/img2.jpg' %}" alt="">
+                                                <img src="{% static 'assets/images/322x555medina.jpg' %}" alt="">
                                             </figure>
                                             <div class="meta-cat bg-meta-cat">
-                                                <a href="#">NORWAY</a>
+                                                <a href="#">Umra ziyorati</a>
                                             </div>
                                             <div class="desti-content">
                                                 <h3>
-                                                    <a href="#">Besseggen Ridge</a>
+                                                    <a href="#">Madina, Makka</a>
                                                 </h3>
                                                 <div class="rating-start" title="Rated 5 out of 5">
                                                     <span style="width: 100%"></span>
@@ -232,14 +202,14 @@
                                     <div class="col-md-6 col-xl-12">
                                         <div class="desti-item overlay-desti-item">
                                             <figure class="desti-image">
-                                                <img src="{% static 'assets/images/img3.jpg' %}" alt="">
+                                                <img src="{% static 'assets/images/460x255uz.jpg' %}" alt="">
                                             </figure>
                                             <div class="meta-cat bg-meta-cat">
-                                                <a href="#">NEW ZEALAND</a>
+                                                <a href="#">Yurtimiz bo'ylab</a>
                                             </div>
                                             <div class="desti-content">
                                                 <h3>
-                                                    <a href="#">Oxolotan City</a>
+                                                    <a href="#">Samarqand, Buxoro</a>
                                                 </h3>
                                                 <div class="rating-start" title="Rated 5 out of 5">
                                                     <span style="width: 100%"></span>
@@ -250,14 +220,14 @@
                                     <div class="col-md-6 col-xl-12">
                                         <div class="desti-item overlay-desti-item">
                                             <figure class="desti-image">
-                                                <img src="{% static 'assets/images/img4.jpg' %}" alt="">
+                                                <img src="{% static 'assets/images/460x255uz.jpg' %}" alt="">
                                             </figure>
                                             <div class="meta-cat bg-meta-cat">
-                                                <a href="#">SINGAPORE</a>
+                                                <a href="#">Yurtimiz bo'ylab</a>
                                             </div>
                                             <div class="desti-content">
                                                 <h3>
-                                                    <a href="#">Marina Bay Sand City</a>
+                                                    <a href="#">Xiva,Samarqand</a>
                                                 </h3>
                                                 <div class="rating-start" title="Rated 5 out of 4">
                                                     <span style="width: 60%"></span>
@@ -269,7 +239,7 @@
                             </div>
                         </div>
                         <div class="btn-wrap text-center">
-                            <a href="#" class="button-primary">MORE DESTINATION</a>
+                            <a href="#" class="button-primary text-uppercase">Ko'proq ma'lumot olish</a>
                         </div>
                     </div>
                 </div>
@@ -280,8 +250,8 @@
                     <div class="section-heading text-center">
                         <div class="row">
                             <div class="col-lg-8 offset-lg-2">
-                                <h5 class="dash-style">EXPLORE GREAT PLACES</h5>
-                                <h2>POPULAR PACKAGES</h2>
+                                <h5 class="dash-style">NARXLAR</h5>
+                                <h2>BIZNING TARIFLARIMIZ</h2>
                                 <p>Mollit voluptatem perspiciatis convallis elementum corporis quo veritatis aliquid blandit, blandit torquent, odit placeat. Adipiscing repudiandae eius cursus? Nostrum magnis maxime curae placeat.</p>
                             </div>
                         </div>
@@ -292,25 +262,25 @@
                                 <div class="package-wrap">
                                     <figure class="feature-image">
                                         <a href="#">
-                                            <img src="{% static 'assets/images/img5.jpg' %}" alt="">
+                                            <img src="{% static 'assets/images/365x305m.jpg' %}" alt="">
                                         </a>
                                     </figure>
                                     <div class="package-price">
                                         <h6>
-                                            <span>$1,900 </span> / per person
+                                            <span>$1,900 </span> / 1 kishi
                                         </h6>
                                     </div>
                                     <div class="package-content-wrap">
                                         <div class="package-meta text-center">
                                             <ul>
                                                 <li>
-                                                    <i class="far fa-clock"></i> 7D/6N
+                                                    <i class="far fa-clock"></i> 7k/6k
                                                 </li>
                                                 <li>
-                                                    <i class="fas fa-user-friends"></i> People: 5
+                                                    <i class="fas fa-user-friends"></i> Guruhda: 5
                                                 </li>
                                                 <li>
-                                                    <i class="fas fa-map-marker-alt"></i> Malaysia
+                                                    <i class="fas fa-map-marker-alt"></i> Samarqand
                                                 </li>
                                             </ul>
                                         </div>
@@ -337,7 +307,7 @@
                                 <div class="package-wrap">
                                     <figure class="feature-image">
                                         <a href="#">
-                                            <img src="{% static 'assets/images/img6.jpg' %}" alt="">
+                                            <img src="{% static 'assets/images/365x305s.jpg' %}" alt="">
                                         </a>
                                     </figure>
                                     <div class="package-price">
@@ -382,7 +352,7 @@
                                 <div class="package-wrap">
                                     <figure class="feature-image">
                                         <a href="#">
-                                            <img src="{% static 'assets/images/img7.jpg' %}" alt="">
+                                            <img src="{% static 'assets/images/365x305uz.jpg' %}" alt="">
                                         </a>
                                     </figure>
                                     <div class="package-price">
@@ -430,99 +400,7 @@
                     </div>
                 </div>
             </section>
-            <!-- packages html end -->
-            <!-- Home callback section html start -->
-            <section class="callback-section">
-                <div class="container">
-                    <div class="row no-gutters align-items-center">
-                        <div class="col-lg-5">
-                            <div class="callback-img" style="background-image: url({% static 'assets/images/img8.jpg' %});">
-                                <div class="video-button">
-                                    <a id="video-container" data-video-id="IUN664s7N-c">
-                                        <i class="fas fa-play"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-7">
-                            <div class="callback-inner">
-                                <div class="section-heading section-heading-white">
-                                    <h5 class="dash-style">CALLBACK FOR MORE</h5>
-                                    <h2>GO TRAVEL. DISCOVER. REMEMBER US!!</h2>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo. Eaque adipiscing, luctus eleifend.</p>
-                                </div>
-                                <div class="callback-counter-wrap">
-                                    <div class="counter-item">
-                                        <div class="counter-icon">
-                                            <img src="{% static 'assets/images/icon1.png' %}" alt="">
-                                        </div>
-                                        <div class="counter-content">
-                                            <span class="counter-no">
-                                                <span class="counter">500</span>K+
-                                            </span>
-                                            <span class="counter-text">
-                                                Satisfied Clients
-                                            </span>
-                                        </div>
-                                    </div>
-                                    <div class="counter-item">
-                                        <div class="counter-icon">
-                                            <img src="{% static 'assets/images/icon2.png' %}" alt="">
-                                        </div>
-                                        <div class="counter-content">
-                                            <span class="counter-no">
-                                                <span class="counter">250</span>K+
-                                            </span>
-                                            <span class="counter-text">
-                                                Satisfied Clients
-                                            </span>
-                                        </div>
-                                    </div>
-                                    <div class="counter-item">
-                                        <div class="counter-icon">
-                                            <img src="assets/images/icon3.png" alt="">
-                                        </div>
-                                        <div class="counter-content">
-                                            <span class="counter-no">
-                                                <span class="counter">15</span>K+
-                                            </span>
-                                            <span class="counter-text">
-                                                Satisfied Clients
-                                            </span>
-                                        </div>
-                                    </div>
-                                    <div class="counter-item">
-                                        <div class="counter-icon">
-                                            <img src="assets/images/icon4.png" alt="">
-                                        </div>
-                                        <div class="counter-content">
-                                            <span class="counter-no">
-                                                <span class="counter">10</span>K+
-                                            </span>
-                                            <span class="counter-text">
-                                                Satisfied Clients
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="support-area">
-                                    <div class="support-icon">
-                                        <img src="assets/images/icon5.png" alt="">
-                                    </div>
-                                    <div class="support-content">
-                                        <h4>Our 24/7 Emergency Phone Services</h4>
-                                        <h3>
-                                            <a href="#">Call: 123-456-7890</a>
-                                        </h3>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!-- callback html end -->
-            <!-- Home activity section html start -->
+
             <section class="activity-section">
                 <div class="container">
                     <div class="section-heading text-center">
@@ -539,7 +417,7 @@
                             <div class="activity-item">
                                 <div class="activity-icon">
                                     <a href="#">
-                                        <img src="assets/images/icon6.png" alt="">
+                                        <img src="{% static 'assets/images/icon6.png' %}" alt="">
                                     </a>
                                 </div>
                                 <div class="activity-content">
@@ -554,7 +432,7 @@
                             <div class="activity-item">
                                 <div class="activity-icon">
                                     <a href="#">
-                                        <img src="assets/images/icon10.png" alt="">
+                                        <img src="{% static 'assets/images/icon10.png' %}" alt="">
                                     </a>
                                 </div>
                                 <div class="activity-content">
@@ -569,7 +447,7 @@
                             <div class="activity-item">
                                 <div class="activity-icon">
                                     <a href="#">
-                                        <img src="assets/images/icon9.png" alt="">
+                                        <img src="{% static 'assets/images/icon9.png' %}" alt="">
                                     </a>
                                 </div>
                                 <div class="activity-content">
@@ -584,7 +462,7 @@
                             <div class="activity-item">
                                 <div class="activity-icon">
                                     <a href="#">
-                                        <img src="assets/images/icon8.png" alt="">
+                                        <img src="{% static 'assets/images/icon8.png' %}" alt="">
                                     </a>
                                 </div>
                                 <div class="activity-content">
@@ -599,7 +477,7 @@
                             <div class="activity-item">
                                 <div class="activity-icon">
                                     <a href="#">
-                                        <img src="assets/images/icon7.png" alt="">
+                                        <img src="{% static 'assets/images/icon7.png' %}" alt="">
                                     </a>
                                 </div>
                                 <div class="activity-content">
@@ -614,7 +492,7 @@
                             <div class="activity-item">
                                 <div class="activity-icon">
                                     <a href="#">
-                                        <img src="assets/images/icon11.png" alt="">
+                                        <img src="{% static 'assets/images/icon11.png' %}" alt="">
                                     </a>
                                 </div>
                                 <div class="activity-content">
