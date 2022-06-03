@@ -1,0 +1,76 @@
+.no-content-section {
+	background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	padding-top: 150px;
+	padding-bottom: 150px;
+	position: relative;
+	.overlay {
+		background-color: $title-color;
+		opacity: 0.6;
+		z-index: 1;
+	}
+	@include bp(smx) {
+		padding-bottom: 80px;
+	}
+}
+.no-content-wrap {
+	position: relative;
+	text-align: center;
+	z-index: 2;
+	span {
+		color: rgba($light-color, 0.32);
+		@include font-size(300);
+		font-family: $title-font;
+		font-weight: 900;
+		line-height: 1;
+	}
+	h1 {
+		color: $light-color;
+		margin-bottom: 0;
+		position: absolute;
+		@include translate(0, -80%);
+		top: 50%;
+		left: 0;
+		right: 0;
+	}
+	h4 {
+		color: $light-color;
+		@include font-size(18);
+		font-weight: 700;
+		margin-top: 40px;
+	}
+	.search-form-wrap {
+		max-width: 640px;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 46px; 
+		.search-form {
+			input {
+				padding: 0 55px 0 20px;
+			}
+			button {
+				padding: 10px 20px;
+				top: 0;
+				right: 0;
+				height: 100%;
+			}
+		}
+	}
+	@include bp(mdx) {
+		span {
+			@include font-size(224);
+		}
+	}
+	@include bp(smx) {
+		span {
+			@include font-size(145);
+		}
+		h1 {
+			@include translate(0, -145%);
+		}
+		h4 {
+			@include font-size(16);
+		}
+	}
+}

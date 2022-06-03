@@ -1,0 +1,63 @@
+$xl: 1200px !default;
+$lg: 992px !default;
+$md: 768px !default;
+$sm: 576px !default;
+$xs: 480px !default;
+
+@mixin bp($point){
+
+  // Mobile First
+  @if $point == xl {
+    @media screen and (min-width: $xl) {
+      @content;
+    }
+  }
+
+  @if $point == lg {
+    @media screen and (min-width: $lg) {
+      @content;
+    }
+  }
+
+  @else if $point == md {
+    @media screen and (min-width: $md) {
+      @content;
+    }
+  }
+
+  @else if $point == sm {
+    @media screen and (min-width: $sm) {
+      @content;
+    }
+  }
+
+  // Desktop First
+  @if $point == xlx {
+    @media screen and (max-width: ($xl - 1px)) {
+      @content;
+    }
+  }
+
+  @else if $point == lgx {
+    @media screen and (max-width: ($lg - 1px)) {
+      @content;
+    }
+  }
+
+  @else if $point == mdx {
+    @media screen and (max-width: ($md - 1px)) {
+      @content;
+    }
+  }
+
+  @else if $point == smx {
+    @media screen and (max-width: ($sm - 1px)) {
+      @content;
+    }
+  }
+  @else if $point == xsx {
+    @media screen and (max-width: ($xs - 1px)) {
+      @content;
+    }
+  }
+}

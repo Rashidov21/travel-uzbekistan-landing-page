@@ -1,0 +1,35 @@
+table {
+  color: #737373;
+	margin: 0 0 1.5em;
+	border-collapse: separate;
+	border-spacing: 0;
+	border-width: 1px 0 0 1px;
+	// table-layout: fixed; /* Prevents HTML tables from becoming too wide */
+	width: 100%;
+  @include font-size(15);
+  thead {
+    tr {
+      background-color: lighten(#000, 15%);
+      th {
+        color: #383838;
+      }
+    }
+  }
+  &.table {
+    color: #737373;
+  }
+}
+
+th {
+  border-width: 0 1px 1px 0;
+  font-weight: 700;
+}
+
+td {
+  border-width: 0 1px 1px 0;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+th, td {
+  padding: 8px;
+}

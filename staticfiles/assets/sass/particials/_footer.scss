@@ -1,0 +1,122 @@
+.site-footer {
+	background-color: #383838;
+	padding-top: 80px;
+	.top-footer {
+		padding-bottom: 55px;
+	}
+	.award-img {
+		@include flexbox();
+		@include align-items(center);
+		margin-top: 15px;
+		a {
+			width: 50%;
+			&:first-child {
+				margin-right: 10px;
+			}
+		}
+	}
+	.buttom-footer {
+		background-color: #404040;
+		padding: 30px 0;
+	}
+	.copy-right {
+		color: $light-color;
+		a {
+			color: $light-color;
+			&:hover {
+				color: $hover-color;
+			}
+		}
+	}
+	.footer-menu {
+		ul {
+			margin: 0;
+			padding: 0;
+			font-size: 0;
+			li {
+				list-style: none;
+				display: inline-block;
+				position: relative;
+				padding: 0 10px;
+				&:before {
+					content: "|";
+					position: absolute;
+					top: 0;
+					right: -2px;
+					font-size: 14px;
+					color: #B6B6B6;
+				}
+				&:last-child {
+					&:before {
+						display: none;
+					}
+				}
+				a {
+					color: $light-color;
+					font-size: 15px;
+					&:hover,
+					&:focus {
+						color: $hover-color;
+					}
+				}
+			}
+		}
+	}
+	@include bp(smx) {
+		padding-top: 50px;
+		.top-footer {
+			padding-bottom: 25px;
+		}
+	}
+	@include bp(mdx) {
+		.footer-menu {
+			text-align: center;
+			margin-bottom: 15px;
+		}
+		.footer-logo {
+			margin-bottom: 15px;
+		}
+		.copy-right {
+			text-align: center !important;
+		}
+	}
+}
+.footer-primary {
+	.widget {
+		color: darken($light-color, 12%);
+		.widget-title {
+			color: $light-color;
+			font-size: 15px;
+			font-weight: 700;
+			line-height: 1.2;
+			@include flexbox();
+			margin-bottom: 18px;
+			@include align-items(center);
+			text-transform: uppercase;
+			&:before {
+				background-color: $secondary-color;
+				content: "";
+				height: 18px;
+				width: 3px;
+				margin-right: 10px;
+			}
+		}
+		ul {
+			li {
+				a {
+					color: $light-color;
+					&:hover,
+					&:focus,
+					&:active {
+						color: $hover-color;
+					}
+				}
+			}
+		}
+	}
+	@include bp(lgx) {
+		.widget {
+			margin-bottom: 30px;
+		}
+	}
+}

@@ -1,0 +1,92 @@
+.inner-banner-wrap {
+	padding-bottom: 50px;
+	@include bp(smx) {
+		padding-bottom: 0;
+	}
+}
+.inner-shape {
+	background-image: url(assets/images/slider-pattern.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	content: "";
+	height: 150px;
+	width: 100%;
+	margin-top: -100px;
+	position: relative;
+	@include bp(lgx) {
+		height: 105px;
+	}
+}
+.inner-banner-gray {
+	background-color: #FAFAFA;
+	.inner-shape {
+		background-image: url(assets/images/banner-pattern.png);
+	}
+}
+.inner-baner-container {
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: bottom center;;
+	padding: 190px 0 150px;
+	text-align: center;
+	position: relative;
+	&:before {
+		background-color: #151515;
+		content: "";
+		display: block;
+		opacity: 0.65;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		position: absolute;
+	}
+	.inner-banner-content {
+		position: relative;
+		color: $light-color;
+	}
+	.inner-title {
+		color: $light-color;
+		line-height: 1.1;
+	}
+	.breadcrumb {
+		background-color: transparent;
+		@include justify-content(center);
+		margin: 0;
+		padding: 0;
+		li {
+			color: $light-color;
+			@include font-size(14);
+			&:before {
+				color: inherit;
+			}
+			a {
+				color: $light-color;
+				&:hover {
+					color: $hover-color;
+				}
+			}
+			&.active {
+				color: darken($light-color, 30%);
+			}
+		}
+	}
+	.breadcrumb-content {
+		position: absolute;
+		left: 0;
+		right: 0;
+		bottom: 20px;
+	}
+	@include bp(smx) {
+		.inner-title {
+			@include font-size(30);
+		}
+		.inner-banner-content {
+			p {
+				@include font-size(15);
+			}
+		}
+	}
+}

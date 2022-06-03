@@ -1,0 +1,204 @@
+/* Slicknav - a Mobile Menu */
+.mobile-menu-container {
+	.slicknav_menu {
+		background-color: transparent;
+		padding: 0;
+		@include bp(lg) {
+			display: none;
+		}
+		.slicknav_btn {
+			@include flexbox;
+			@include justify-content(center);
+			@include flex-direction(row-reverse);
+			margin: 10px 0;
+			float: none;
+		}
+		.slicknav_icon {
+			margin-left: 0;
+			margin-right: 10px;
+		}
+		.slicknav_menutxt {
+			color: #FFF;
+			text-shadow: none;
+			font-weight: normal;
+			font-size: 16px;
+			font-weight: 700;
+		}
+		.slicknav_nav {
+			li {
+				border-top: 1px solid darken($light-color, 10%);
+				.slicknav_arrow {
+					color: #7a7a7a;
+					font-size: 13px;
+				}
+			}
+		}
+		.slicknav_row {
+			@include flexbox;
+			@include flex-wrap(wrap);
+			padding: 0;
+			margin: 0;
+			> a {
+				@include calc(width, '100% - 45px');
+			}
+			.slicknav_item {
+				border-left: 1px solid darken($light-color, 10%);
+				width: 45px;
+				padding: 0;
+				@include flexbox;
+				@include align-items(center);
+				@include justify-content(center);
+				.slicknav_arrow {
+					position: static;
+					padding: 0;
+					margin: 0;
+				}
+			}
+			&:hover,
+			&:focus,
+			&:active {
+				background-color: transparent;
+				@include border-radius(0px);
+			}
+		}
+	}
+	@include bp(lgx) {
+    	border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+    }
+}
+.slicknav_menu {
+	.slicknav_btn {
+		background-color: transparent;
+		padding: 0;
+	}
+	.slicknav_icon-bar {
+		background-color: #242424;
+	}
+	.slicknav_nav {
+		ul {
+			margin: 0;
+			padding: 0;
+		}
+		li {
+			position: relative;
+			list-style: none;
+			a {
+				display: inline-block;
+				font-size: 15px;
+				color: lighten($dark-color, 20%);
+				font-weight: 600;
+				padding: 10px 15px;
+				@include transition (all 0.3s);
+				&:hover,
+				&:focus,
+				&:active {
+					background-color: transparent;
+					color: $hover-color;
+					@include border-radius(0px);
+				}
+			}
+		}
+	}
+	.slicknav_nav {
+		background-color: $light-color;
+		@include box-shadow (0px 22px 21px rgba(0, 0, 0, 0.1));
+	}
+	.slicknav_arrow {
+		position: absolute;
+		right: 5px;
+		height: 100%;
+		top: 0;
+		display: -webkit-flex;
+		display: flex;
+		-webkit-align-items: center;
+		align-items: center;
+		padding: 0 10px;
+	}
+}
+.slicknav_btn {
+    position: relative;
+    display: block;
+    vertical-align: middle;
+    float: right;
+    padding: 0;
+    line-height: 1.125em;
+    cursor: pointer;
+    @include transition(background-color 0.4s);
+    .slicknav_icon {
+    	width: 22px;
+    	height: 16px;
+    	display: block;
+    	position: relative;
+    	margin-top: 1px;
+    	&:before {
+    		display: none;
+    	}
+    	span {
+    		background-color: #FFF;
+    		box-shadow: none;
+    		display: none;
+    		position: absolute;
+    		top: 50%;
+    		left: 50%;
+    		width: 20px;
+    		height: 2px;
+    		margin: 0;
+    		@include translate(-50%, -50%);
+    		&:first-child {
+    			display: block;
+    			&:before,
+    			&:after {
+    				background-color: #FFF;
+    				content: "";
+    				position: absolute;
+    				width: 100%;
+    				height: 100%;
+    				-webkit-transition-property: top, transform;
+    				-moz-transition-property: top, transform;
+    				-ms-transition-property: top, transform;
+    				-o-transition-property: top, transform;
+    				transition-property: top, transform;
+    				-webkit-transition-delay: 0.5s, 0s;
+    				-moz-transition-delay: 0.5s, 0s;
+    				-ms-transition-delay: 0.5s, 0s;
+    				-o-transition-delay: 0.5s, 0s;
+    				transition-delay: 0.5s, 0s;
+    				-webkit-transition-duration: 0.5s, 0.5s;
+    				-moz-transition-duration: 0.5s, 0.5s;
+    				-ms-transition-duration: 0.5s, 0.5s;
+    				-o-transition-duration: 0.5s, 0.5s;
+    				transition-duration: 0.5s, 0.5s;
+    			}
+    			&:before {
+    				top: -6px;
+    			}
+    			&:after {
+    				top: 6px;
+    			}
+    		}
+    	}
+    }
+    &.slicknav_open {
+    	span {
+    		&:first-child {
+    			background-color: transparent !important;
+    			&:before,
+    			&:after {
+    				-webkit-transition-delay: 0s, 0.5s;
+    				-moz-transition-delay: 0s, 0.5s;
+    				-ms-transition-delay: 0s, 0.5s;
+    				-o-transition-delay: 0s, 0.5s;
+    				transition-delay: 0s, 0.5s;
+    			}
+    			&:before {
+    				top: 0;
+    				@include rotate(45);
+    			}
+    			&:after {
+    				top: 0;
+    				@include rotate(-45);
+    			}
+    		}
+    	}
+    }
+}

@@ -1,0 +1,45 @@
+.team-section {
+
+}
+
+.team-item {
+	border: 1px solid rgba(7, 145, 190, 0.13);
+	margin-bottom: 30px;
+	.heading-wrap {
+		background-color: $light-color;
+		box-shadow: 0px 0px 25px 0px rgba($dark-color, 0.08);
+		padding: 20px;
+		margin-bottom: 25px;
+		margin-top: -50px;
+    	position: relative;
+		h3 {
+			margin-bottom: 8px;
+		}
+		h5 {
+			color: $secondary-color;
+			font-weight: 700;
+			margin-bottom: 0;
+		}
+	}
+	.team-content {
+		padding: 0 25px 25px;
+		text-align: center;
+	}
+	.social-links {
+		li {
+			margin: 0 5px;
+		}
+		a {
+			background-color: $primary-color;
+			width: 30px;
+			height: 30px;
+			line-height: 30px;
+			color: $light-color;
+			display: block;
+			@include transition(background-color 0.4s);
+			&:hover {
+				background-color: $hover-color;
+			}
+		}
+	}
+}

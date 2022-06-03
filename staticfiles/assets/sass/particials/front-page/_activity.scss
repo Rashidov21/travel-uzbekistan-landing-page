@@ -1,0 +1,136 @@
+.activity-section {
+	padding-bottom: 100px;
+	@include bp(lgx) {
+		padding-bottom: 82px;
+	}
+	@include bp(smx){
+		padding-bottom: 42px;
+	}
+}
+
+.activity-inner {
+	@include flexbox();
+	@include flex-wrap(wrap);
+	&.row {
+		margin-left: -9px;
+		margin-right: -9px;
+	}
+	[class*="col-"] {
+		padding-left: 9px;
+		padding-right: 9px;
+	}
+	.activity-item {
+		border: 1px solid #D9D9D9;
+		text-align: center;
+		padding: 15px;
+		.activity-icon {
+			margin-bottom: 15px;
+		}
+		h4 {
+			margin-bottom: 8px;
+			font-weight: 700;
+			line-height: 1.2;
+		}
+		p {
+			margin-bottom: 0;
+		}
+	}
+	@include bp(lgx) {
+		.activity-item {
+			margin-bottom: 18px;
+		}
+	}
+}
+
+.activity-bg-image {
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	background-attachment: fixed;
+	padding-top: 100px;
+	margin-bottom: 100px;
+	position: relative;
+	&:before {
+		content: "";
+		background-color: #151515;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		width: 100%;
+		height: 100%;
+		opacity: 0.75;
+	}
+	.activity-inner {
+		&.row {
+			margin-left: 0;
+			margin-right: 0;
+		}
+		[class*="col-"] {
+			padding-left: 0;
+			padding-right: 0;
+		}
+	}
+	.activity-item {
+		border-width: 0 1px 0 0;
+		border-color: rgba($light-color, 0.28);
+		margin-bottom: 0;
+	}
+	.activity-content {
+		h4 {
+			color: $light-color;
+		}
+		color: $light-color;
+	}
+	[class*="col-"] {
+		&:last-child {
+			.activity-item {
+				border-right: none;
+			}
+		}
+	}
+	@media (max-width:991px) and (min-width:768px) { 
+		.activity-item {
+			border-width: 0 1px 1px 0;
+		}
+		[class*="col-"] {
+			&:nth-child(3) {
+				~[class*="col-"] .activity-item {
+					border-bottom: none;
+				}
+			}
+			&:nth-child(3) {
+				.activity-item {
+					border-right: none;
+				}
+			}
+		}
+	}
+	@include bp(lgx) {
+		padding-top: 82px;
+		margin-bottom: 82px;
+		
+	}
+	@include bp(mdx) {
+		.activity-item {
+			border-width: 0 1px 1px 0;
+		}
+		[class*="col-"] {
+			&:nth-child(4) {
+				~[class*="col-"] .activity-item {
+					border-bottom: none;
+				}
+			}
+			&:nth-child(2n+2) {
+				.activity-item {
+					border-right: none;
+				}
+			}
+		}
+	}
+	@include bp(smx){
+		padding-top: 50px;
+		margin-bottom: 50px;
+	}
+}

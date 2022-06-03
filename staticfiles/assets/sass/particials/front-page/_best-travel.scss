@@ -1,0 +1,19 @@
+.best-section{
+	padding-bottom: 70px;
+	.section-heading {
+		margin-bottom: 37px;
+	}
+	.gallery-img {
+		margin-bottom: 30px;
+	}
+	@include bp(lgx) {
+		.gallery-img {
+			img {
+				width: 100%;
+			}
+		}
+	}
+	@include bp(smx) {
+		padding-bottom: 30px;
+	}
+}

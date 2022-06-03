@@ -1,0 +1,10 @@
+.package-offer-wrap {
+	.special-section {
+		padding-bottom: 155px;
+	}
+	@include bp(smx) {
+		.special-section {
+			padding-bottom: 130px;
+		}
+	}
+}

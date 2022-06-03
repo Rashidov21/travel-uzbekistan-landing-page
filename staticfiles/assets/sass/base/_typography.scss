@@ -1,0 +1,373 @@
+body {
+	@include font-size(15);
+	color: lighten($dark-color, 22%);
+    background-color: $light-color;
+    font-family: $primary-font;
+    font-weight: normal;
+    font-style: normal;
+	line-height: $body-line-height;
+    -webkit-font-smoothing: antialiased;
+    word-wrap: break-word;
+    @include bp(smx) {
+    	font-size: 14px;
+    }
+}
+p {
+	line-height: 1.6;
+	margin: 0 0 15px;
+    word-wrap: break-word;
+}
+dfn, cite, em, i {
+	font-style: italic;
+}
+blockquote, pre {
+	background-color: darken($light-color, 2%);
+	border-width: 0 0 0 3px;
+	border-color: darken($light-color, 15%);
+	border-style: solid;
+	@include box-shadow(none);
+	color: lighten($dark-color, 10%);
+	font-family: $primary-font;
+	font-style: italic;
+	margin: 0 0 15px 0;
+	padding: 25px 22px;
+	@include font-size(18);
+	p {
+		margin-bottom: 0;
+	}
+}
+blockquote {
+	background-color: transparent;
+	border-left: none;
+	color: $title-color;
+	margin: 40px 0;
+	text-align: center;
+	position: relative;
+	padding: 30px;
+	&:before {
+		background-color: #fff;
+		color: lighten($dark-color, 20%);
+		content: "\f10d";
+		font-family: 'Font Awesome 5 Free';
+		font-weight: 900;
+		@include font-size(20);
+		float: left;
+		margin-right: 20px;
+		line-height: 1;
+		font-style: normal;
+		position: absolute;
+		left: 50%;
+		@include translate(-50%, 0);
+		top: -10px;
+    	padding: 0 10px;
+    	z-index: 9;
+	}
+	&:after {
+		border-bottom: 2px solid #ddd;
+		border-top: 2px solid #ddd;
+		content: "";
+		bottom: 0;
+		content: "";
+		display: block;
+		left: 50%;
+		@include translate(-50%, 0);
+		position: absolute;
+		top: 0;
+		width: 200px;
+	}
+	p {
+    	font-size: 28px;
+    	line-height: 1.4;
+	}
+	cite {
+		color: #8d8d8d;
+		display: block;
+		font-style: normal;
+		@include font-size(13);
+	}
+}
+abbr, acronym {
+	border-bottom: 1px dotted lighten($dark-color, 30%);
+	cursor: help;
+}
+mark, ins {
+	text-decoration: none;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+big {
+	font-size: 125%;
+}
+b, strong {
+	font-weight: 700;
+}
+iframe {
+	display: block;
+	width: 100%;
+}
+img {
+	height: auto;
+	max-width: 100%;
+	vertical-align: top;
+}
+
+/*--------------------------------------------------------------
+# Heading
+--------------------------------------------------------------*/
+%heading-group {
+	color: $title-color;
+	font-family: $title-font;
+}
+h1, h2, h3, h4, h5, h6 {
+	@extend %heading-group;
+	margin: 0 0 15px;
+	line-height: $title-line-height;
+	a {
+		color: inherit;
+	}
+}
+h1 {
+    @include font-size(65);
+    font-weight: 900;
+}
+h2 {
+    @include font-size(48);
+    font-weight: 900;
+}
+h3 {
+    @include font-size(23);
+    font-weight: 700;
+}
+h4 {
+    @include font-size(18);
+    font-weight: 700;
+}
+h5 {
+    @include font-size(15);
+}
+h6 {
+    @include font-size(12);
+}
+@include bp(mdx){
+	h1 {
+		@include font-size(32);
+	}
+	h2 {
+		@include font-size(24);
+	}
+	h3 {
+		@include font-size(18);
+	}
+	h4 {
+		@include font-size(14);
+	}
+	h5 {
+		@include font-size(14);
+	}
+	h6 {
+		@include font-size(12);
+	}
+}
+
+/*--------------------------------------------------------------
+# Lists
+--------------------------------------------------------------*/
+ul, 
+ol {
+	margin: 0 0 1.5em 0.875em;
+}
+ul {
+	list-style: disc;
+}
+ol {
+	list-style: decimal;
+}
+li > ul,
+li > ol {
+	margin-bottom: 0;
+	margin-left: 1.5em;
+}
+dt {
+	font-weight: bold; 
+}
+dd {
+	margin: 0 1.5em 1.5em; 
+}
+
+/*--------------------------------------------------------------
+# Links
+--------------------------------------------------------------*/
+a {
+	color: #0085BA;
+	text-decoration: none;
+	@include transition (color 0.3s);
+	&:hover,
+	&:focus,
+	&:active {
+		color: $hover-color;
+		text-decoration: none;
+		outline: 0;
+	}
+	&:visited {
+		text-decoration: none;
+		outline: 0;
+	}
+}
+
+/* Text meant only for screen readers. */
+.screen-reader-text {
+	border: 0;
+	clip: rect(1px, 1px, 1px, 1px);
+	clip-path: inset(50%);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute !important;
+	width: 1px;
+	word-wrap: normal !important;
+	/* Many screen reader and browser combinations announce broken words as they would appear visually. */
+
+	&:focus {
+		background-color: darken($light-color, 10%);
+		border-radius: 3px;
+		box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+		clip: auto !important;
+		clip-path: none;
+		color: lighten($dark-color, 10%);
+		display: block;
+		@include font-size(14);
+		font-weight: bold;
+		height: auto;
+		left: 5px;
+		line-height: normal;
+		padding: 15px 23px 14px;
+		text-decoration: none;
+		top: 5px;
+		width: auto;
+		z-index: 100000; /* Above WP toolbar. */
+	}
+}
+
+/* Do not show the outline on the skip link target. */
+#content[tabindex="-1"]:focus {
+	outline: 0;
+}
+
+/*--------------------------------------------------------------
+# Others
+--------------------------------------------------------------*/
+
+.container {
+	max-width: 1170px;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+.overlay {
+	background-color: rgba(0, 0, 0, 0.5);
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+}
+
+.section-heading {
+	margin-bottom: 50px;
+	h2 {
+		font-size: 48px;
+    	font-weight: 900;
+    	line-height: 1.1;
+		text-transform: uppercase;
+	}
+	h5 {
+		color: $primary-color;		
+		font-size: 15px;
+	    font-weight: 700;
+	    line-height: 1.2;
+	    margin-bottom: 22px;
+	    text-transform: uppercase;
+	    display: inline-block;
+	}
+	p {
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+	@include bp(mdx) {
+		h2 {
+			@include font-size(30);
+		}
+	}
+	@include bp(smx) {
+		margin-bottom: 30px;
+		h2 {
+			@include font-size(24);
+		}
+	}
+}
+.section-heading {
+	.dash-style {
+		padding-left: 80px;
+	    position: relative;
+	    &:before {
+    		background-color: $primary-color;
+    		content: "";
+    		height: 2px;
+    		width: 70px;
+   			margin-right: 10px;
+		    position: absolute;
+		    left: 0;
+		    top: 50%;
+    	}
+	}
+}
+
+.title-icon-divider {
+	color: $secondary-color;
+	line-height: 1;
+	position: relative;
+	margin-top: 25px;
+	&:before,
+	&:after {
+		content: "....";
+		display: inline-block;
+		font-size: 37px;
+		line-height: 0;
+		letter-spacing: 3px;
+	}
+	[class*="fa-"] {
+		font-size: 20px;
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+	~ p {
+		margin-top: 30px;
+	}
+}
+
+.title-icon-divider {
+	@include flexbox();
+	.text-center & {
+		@include justify-content(center);
+	}
+}
+
+.section-heading-white {
+	color: $light-color;
+	.dash-style {
+		color: $light-color;
+		&:before {
+			background-color: $light-color;
+		}
+	}
+	h2,
+	p {
+		color: $light-color;
+	}
+	.title-icon-divider {
+		color: $light-color;
+	}
+}

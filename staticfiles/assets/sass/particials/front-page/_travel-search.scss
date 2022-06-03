@@ -1,0 +1,131 @@
+.shape-search-section {
+	padding-bottom: 100px;
+	position: relative;
+	.slider-shape {
+		background-image: url(assets/images/slider-pattern.png);
+		background-size: cover;
+		background-repeat: no-repeat;
+		content: "";
+		height: 144px;
+		width: 100%;
+		margin-top: -70px;
+	}
+	@include bp(sm) {
+	  	.trip-search-inner {
+	  		margin-top: -210px;
+	  	}
+	}
+	@media only screen and (min-width: 915px) {
+	  	.trip-search-inner {
+	  		margin-top: -160px;
+	  	}
+	}
+	@media only screen and (max-width: 580px) {
+		padding-bottom: 60px;
+	  	.trip-search-inner {
+	  		margin-top: -230px;
+	  	}
+	}
+}
+.trip-search-section {
+	.trip-search-inner {
+		box-shadow: 0px 15px 25px 0px rgb(0 0 0 / 8%);
+		padding: 36px 40px 42px;
+		position: relative;
+		@include align-items(flex-end);
+		@include flex-wrap(wrap);
+	}
+	.input-group {
+		width: 20%;
+		padding: 8px;
+		i {
+			position: absolute;
+			bottom: 25px;
+			right: 25px;
+		}
+		&.width-col-1 {
+			width: 100%;
+		}
+	}
+	label {
+		display: inline-block;
+		margin-bottom: 10px;
+		font-size: 15px;
+		font-weight: normal;
+		span {
+			margin-right: 8px;
+			font-size: 14px;
+		}
+	}
+    input {
+        &:focus {
+            outline: none;
+        }
+        &::placeholder { /* Firefox, Chrome, Opera */ 
+            color: darken($light-color, 40%); 
+        } 
+        &:-ms-input-placeholder { /* Internet Explorer 10-11 */ 
+            color: darken($light-color, 40%); 
+        } 
+
+        &::-ms-input-placeholder { /* Microsoft Edge */ 
+            color: darken($light-color, 40%); 
+        }
+    }
+	select,
+	input {
+        background-color: #F8F8F8;
+        color: #383838;
+        border: none;
+		height: 50px;
+		padding: 0 15px;
+		width: 100%;
+		@include box-shadow(none);
+		line-height: 1.6;
+	}
+	input[type="submit"] {
+        background-color: $primary-color;
+        color: $light-color;
+		line-height: 1.3;
+		font-weight: 600;
+		margin-bottom: auto;
+		&:hover,
+		&:focus {
+			background-color: $hover-color;
+			color: $light-color;
+		}
+	}
+	@include bp(sm) {
+		.input-group {
+	    	width: 50%;
+	  	}
+	  	.width-col-3 {
+	  		width: 33.33%;
+	  	}
+	}
+	@media only screen and (min-width: 915px) {
+	  	.input-group {
+	    	width: 20%;
+	  	}
+	}
+	@media only screen and (max-width: 580px) {
+		.input-group {
+	    	width: 100%;
+	  	}
+	  	.trip-search-inner {
+	  		padding: 20px;
+	  	}
+	}
+}
+
+.home-banner-section {
+	.trip-search-section {
+		.trip-search-inner {
+			color: $light-color;
+			padding: 30px;
+			input[type=submit] {
+				margin-top: 10px;
+			}
+		}
+	}
+}

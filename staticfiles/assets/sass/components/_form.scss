@@ -1,0 +1,209 @@
+form {
+	position: relative;
+}
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+input[type="range"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="color"] {
+	height: 48px;
+}
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+input[type="range"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="color"],
+textarea {
+	background-color: $light-color;
+	border: 1px solid darken($light-color, 15%);
+	@include font-size(14);
+	@include border-radius(0px);
+	padding: 0 10px;
+	&:focus {
+		border-color: $primary-color;
+		outline: 0;
+	}
+	&:-webkit-autofill,
+    &:-webkit-autofill:hover, 
+    &:-webkit-autofill:focus, 
+    &:-webkit-autofill:active  {
+        -webkit-transition: background-color 50000s ease-in-out 0s, color 5000s ease-in-out 0s;
+        -moz-transition: background-color 50000s ease-in-out 0s, color 5000s ease-in-out 0s;
+        -ms-transition: background-color 50000s ease-in-out 0s, color 5000s ease-in-out 0s;
+        -o-transition: background-color 50000s ease-in-out 0s, color 5000s ease-in-out 0s;
+        transition: background-color 50000s ease-in-out 0s, color 5000s ease-in-out 0s;
+        background-color: rgba(0, 0, 0, 0) !important; 
+    }
+}
+textarea {
+	padding: 20px 10px;
+	width: 100%;
+}
+select {
+	border: 1px solid darken($light-color, 15%);
+	color: #383838;
+	height: 48px;
+	padding: 0 30px 0 10px;
+	option {
+		padding: 8px;
+	}
+	&:focus{
+    	outline: none;
+	}
+}
+form label {
+ 	font-weight: normal; 
+}
+
+.search-form {
+	position: relative;
+	input {
+		width: 100%;
+		padding: 0 55px 0 10px;
+	}
+	button {
+		background-color: $primary-color;
+		color: $light-color;
+		@include font-size(15);
+		border: none;
+		position: absolute;
+		right: 4px;
+		top: 3px;
+		padding: 13px;
+		@include transition(background-color 0.4s);
+		&:hover {
+			background-color: $hover-color;
+		}
+	}
+}
+.form-group {
+	margin-bottom: 15px;
+	select {
+		height: 48px;
+	}
+	select,
+	input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]) {
+		width: 100%;
+		@include border-radius(0px);
+	}
+	label {
+		display: block;
+		color: #383838;
+		@include font-size(15);
+		margin-bottom: 10px;
+		&.checkbox-list {
+			position: relative;
+			padding-left: 30px;
+		}
+		.custom-checkbox {
+			display: inline-block;
+			width: 18px;
+			height: 18px;
+			border: 1px solid #e6e6e6;
+			position: absolute;
+			left: 0;
+			top: 2px;
+			&:before {
+				background-color: $primary-color;
+				content: "\f00c";
+				font-family: "Font Awesome 5 Free";
+				height: 100%;
+				width: 100%;
+				position: absolute;
+				left: 0;
+				right: 0;
+				opacity: 0;
+				font-weight: 900;
+			    font-size: 10px;
+			    color: #fff;
+			    text-align: center;
+			}
+		}
+		input {
+			&[type="checkbox"] {
+				opacity: 0;
+				position: absolute;
+				z-index: -9;
+			}
+			&:checked ~ .custom-checkbox {
+				border-color: $primary-color;
+				&:before {
+					opacity: 1;
+				}
+			}
+		}
+	}
+}
+.custom-radio-field {
+	position: relative;
+	padding-left: 30px;
+	.radio-field {
+		display: inline-block;
+		@include border-radius(100%);
+		overflow: hidden;
+		width: 20px;
+		height: 20px;
+		border: 1px solid #e6e6e6;
+		position: absolute;
+		left: 0;
+		top: 2px;
+		&:before {
+			background-color: #999;
+			border-radius: 100%;
+			content: "\f00c";
+			color: $light-color;
+			font-family: "Font Awesome 5 Free";
+			font-size: 8px;
+			font-weight: 900;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			position: absolute;
+			text-align: center;
+			line-height: 19px;
+			opacity: 0;
+			@include transition(all 0.3s linear 0.1s);
+		}
+	}
+	input {
+		&[type="radio"] {
+			opacity: 0;
+			position: absolute;
+			z-index: -9;
+		}
+		&:checked ~ .radio-field {
+			&:before {
+				opacity: 1;
+			}
+		}
+	}
+}
+.trip-date-input {
+	position: relative;
+	i {
+		position: absolute;
+		bottom: 15px;
+		right: 10px;
+	}
+}

@@ -1,0 +1,128 @@
+.faq-page-container {
+	padding-bottom: 80px;
+	.pl-20 {
+		@include bp(lgx) {
+			padding-left: 0;
+		}
+	}
+}
+.accordion {
+	.card {
+		box-shadow: 0px 0px 13px -4px rgba(0, 0, 0, 0.2);
+		@include border-radius(0px);
+		margin-bottom: 20px;
+		border: none;
+		&:last-child {
+			margin-bottom: 0;
+		}
+		.card-header {
+			background-color: transparent;
+			border: none;
+			padding: 0;
+			margin: 0;
+		}
+		button {
+			color: #383838;
+			font-family: $primary-font;
+			font-size: 15px;
+			display: block;
+			width: 100%;
+			text-decoration: none;
+			padding: 22px;
+			font-weight: 700;
+			position: relative;
+			text-align: left;
+			text-transform: uppercase;
+			@include border-radius(0px);
+			&:before {
+				content: "\f106";
+				display: block;
+				font-weight: 900;
+				font-family: "Font Awesome 5 Free";
+				float: right;
+				position: absolute;
+				top: 50%;
+				@include translate(0, -50%);
+				right: 15px;
+			}
+			&.collapsed {
+				&:before {
+					content: "\f107";
+				}
+			}
+		}
+		.card-body {
+			font-size: 15px;
+			padding: 0 20px 20px;
+		}
+	}
+}
+
+.qsn-form-container {
+	background-color: $secondary-color;
+	padding: 40px 30px 20px;
+	color: $light-color;
+	text-align: center;
+	h3 {
+		color: $light-color;
+		text-transform: uppercase;
+	}
+	p {
+		margin-bottom: 20px;
+	}
+	form {
+		padding-top: 10px;
+		text-align: left;
+	}
+	input {
+		&:not([type="submit"]) {
+			min-height: 59px;
+			width: 100%;
+		}
+	}
+	input::-webkit-outer-spin-button,
+	input::-webkit-inner-spin-button {
+	  -webkit-appearance: none;
+	  margin: 0;
+	}
+
+	/* Firefox */
+	input[type=number] {
+	  -moz-appearance: textfield;
+	  appearance: textfield;
+	}
+	@include bp(lg) {
+		margin-left: 40px;
+	}
+	@include bp(lgx) {
+		margin-top: 40px;
+	}
+}
+.faq-testimonial {
+	.faq-image {
+		img {
+			width: 100%;
+		}
+	}
+	.testimonial-content {
+		background-color: $primary-color;
+		color: $light-color;
+		margin-right: 25px;
+		margin-top: -100px;
+		padding: 30px;
+		position: relative;
+		i {
+			font-size: 40px;
+		    margin-bottom: 12px;
+		    line-height: 1;
+		}
+		p {
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+	@include bp(lgx) {
+		margin-bottom: 40px;
+	}
+}

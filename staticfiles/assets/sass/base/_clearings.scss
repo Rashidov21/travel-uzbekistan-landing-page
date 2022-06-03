@@ -1,0 +1,6 @@
+.clearfix,
+.entry-content,
+.comment-content,
+.site-header {
+	@include clearfix;
+}

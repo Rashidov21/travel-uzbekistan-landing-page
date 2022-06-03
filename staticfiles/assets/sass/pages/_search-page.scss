@@ -1,0 +1,21 @@
+.search-section {
+	margin-bottom: 70px;
+	.post {
+		border: 1px solid #e6e6e6;
+		.entry-content {
+			padding: 20px;
+		}
+	}
+	.search-outer-wrap {
+		margin-bottom: 80px;
+	}
+	.button-container {
+		.button-text {
+			color: $primary-color;
+			text-transform: uppercase;
+			&:hover {
+				color: $hover-color;
+			}
+		}
+	}
+}

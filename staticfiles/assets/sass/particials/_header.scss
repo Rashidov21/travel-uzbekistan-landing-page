@@ -1,0 +1,208 @@
+.site-header {
+	position: relative;
+}
+.header-primary {
+	left: 0;
+	right: 0;
+	position: absolute;
+	width: 100%;
+	top: 0;
+	z-index: 99;
+}
+/*--- top header css start ---*/
+.top-header {
+	border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+}
+.header-contact-info {
+	color: darken($light-color, 2%);
+	padding: 11px 0;
+	ul {
+		@include font-size(0);
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		li {
+			display: inline-block;
+			@include font-size(13);
+			padding: 0 15px;
+			&:last-child {
+				padding-right: 0;
+			}
+			&:first-child {
+				padding-left: 0;
+			}
+			[class*="fa-"] {
+				margin-right: 5px;
+			}
+			a {
+				color: darken($light-color, 1%);
+				display: block;
+				@include transition(color 0.4s linear);
+				&:hover,
+				&:focus,
+				&:active {
+					color: $hover-color;
+				}
+			}
+		}
+	}
+}
+.header-social {
+	@include inline-flex();
+	@include align-content (center);
+	@include align-items (center);
+	li {
+		margin: 0 8px;
+	}
+	a {
+		color: darken($light-color, 2%);
+		&:hover,
+		&:focus {
+			color: $hover-color;
+		}
+	}
+	@include bp(lgx) {
+		padding: 10px 0;
+	}
+}
+.header-search-icon {
+	@include inline-flex();
+	@include align-content (center);
+	@include align-items (center);
+	border-left: 1px solid rgba(255, 255, 255, 0.25);
+	border-right: 1px solid rgba(255, 255, 255, 0.25);
+	margin-left: 10px;
+	.search-icon {
+		background-color: transparent;
+		border: none;
+		border-radius: 0;
+		color: $light-color;
+		height: 100%;
+		padding: 0 15px;
+		width: 100%;
+		&:hover,
+		&:focus {
+			outline: none;
+			color: $hover-color;
+		}
+	}
+}
+/*--- top header css end ---*/
+
+/*--- header Logo css start ---*/
+.site-identity {
+	.site-title {
+		margin: 0;
+		line-height: 1.1;
+		@include font-size(28); 
+	}
+	.site-description {
+		@include font-size(13);
+		margin-bottom: 0;
+	}
+	img {
+		max-width: 170px;
+		@include transition(opacity 0.4s linear);
+	}
+	a {
+		display: block;
+		&:hover,
+		&:focus,
+		&:active {
+			img {
+				opacity: 0.5;
+			}
+		}
+	}
+	@include bp(smx) {
+		img {
+			max-width: 120px;
+		}
+	}
+}
+
+/*--------------------------------------------------------------
+>>> Main Header Menu
+----------------------------------------------------------------*/
+.bottom-header {
+	@include bp(lgx) {
+		border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+		padding: 10px 0;
+	}
+}
+@import "menu";
+.header-btn {
+	@include flexbox();
+	white-space: nowrap;
+	a {
+		padding: 10px 24px;
+	}
+	@include bp(smx) {
+		@include justify-content(flex-end);
+		a {
+			padding: 8px 20px;
+			font-size: 14px;
+		}
+	}
+}
+/*---  header search css ---*/
+.header-search-form {
+	@include flexbox;
+	@include flex-wrap(wrap);
+	@include align-items(center);
+}
+.header-search-form {
+	background-color: rgba($dark-color, 0.4);
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	right: 0;
+	top: 0;
+	opacity: 0;
+	visibility: hidden;
+	@include scale(0);
+	@include transition(transform 0.5s, opacity 0.5s, visibility 0.5s);
+	z-index: 999;
+	.header-search {
+		position: relative;
+	}
+	input[type="text"] {
+		background-color: $light-color;
+		@include border-radius(0);
+		color: #292929;
+		border: none;
+		width: 100%;
+		height: 42px;
+		padding: 0 20px;
+		text-align: center;
+	}
+	.search-close {
+		color: $light-color;
+		position: absolute;
+		top: 20px;
+		right: 20px;
+		@include font-size(18);
+		@include flexbox;
+		@include justify-content(center);
+		@include align-items(center);
+		@include transition(background-color 0.4s);
+		&:hover,
+		&:focus,
+		&:active {
+			color: $hover-color;
+		}
+
+	}
+	&.search-in {
+		opacity: 1;
+		visibility: visible;
+		@include scale(1);
+	}
+}
+
+/*---  fixed header css ---*/
+@import "fixed-header";
+
+/*---  mobile slick Nav css ---*/
+@import "../components/slick-nav";

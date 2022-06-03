@@ -1,0 +1,248 @@
+.rating-start {
+	display: block;
+	position: relative;
+	@include font-size(15);
+	&:before {
+		color: #ccd6df;
+		content: "\f005 \f005 \f005 \f005 \f005";
+		display: block;
+		font-family: 'Font Awesome 5 free';
+		font-weight: 900;
+	}
+	span {
+		display: block;
+		left: 0;
+		overflow: hidden;
+		position: absolute;
+		top: 0;
+		&:before {
+			color: $primary-color;
+			content: "\f005 \f005 \f005 \f005 \f005";
+			display: inline-block;
+			font-family: 'Font Awesome 5 free';
+			font-weight: 900;
+		}
+	}
+}
+.package-section {
+	padding-bottom: 100px;
+	@include bp(lgx) {
+		padding-bottom: 70px;
+	}
+	@include bp(smx) {
+		padding-bottom: 60px;
+	}
+}
+.package-inner {
+	.row {
+		margin: 0 -12px;
+		[class*="col-"] {
+			padding-left: 12px;
+			padding-right: 12px;
+		}
+	}
+}
+.package-wrap {
+	box-shadow: 0px 0px 35px 0px rgba(0, 0, 0, 0.05);
+	margin-bottom: 24px;
+	position: relative;
+	.package-content {
+		padding: 0 30px 0;
+		.btn-wrap {
+			@include flexbox();
+			border-top: 1px solid rgba(175, 175, 175, 0.1);
+			text-align: center;
+			margin-left: -30px;
+			margin-right: -30px;
+			margin-top: 27px;
+			a {
+				color: #383838;
+				display: block;
+				margin-top: 0;
+				padding: 16px 0;
+				width: 100%;
+				&.width-6 {
+					width: 50%;
+				}
+				+ a {
+					border-left: 1px solid rgba(175, 175, 175, 0.1);
+				}
+				[class*="fa-"] {
+					color: $primary-color;
+					font-size: 13px;
+					margin-left: 8px;
+				}
+				&:hover,
+				&:focus,
+				&:active {
+					color: $secondary-color;
+					[class*="fa-"] {
+						color: $secondary-color;
+						&:before {
+							font-weight: 900;
+						}
+					}
+				}
+			}
+		}
+	}
+	.review-area {
+		margin-bottom: 15px;
+		.review-text {
+			font-size: 13px;
+			color: #787878;
+			line-height: 1.1;
+		}
+	}
+	.rating-start {
+		display: inline-block;
+		margin-left: 5px;
+	}
+	.package-price {
+		background-color: $primary-color;
+		position: absolute;
+		top: 20px;
+		right: 0;
+		h6 {
+			color: $light-color;
+			font-size: 13px;
+			font-family: $primary-font;
+			line-height: 1.1;
+			margin-bottom: 0;
+			padding: 8px 16px;
+			span {
+				font-family: $title-font;
+				font-size: 22px;
+				font-weight: 700;
+				line-height: 1.2;
+			}
+		}
+	}
+	@include bp(lgx){
+		margin-bottom: 30px;
+		.feature-image {
+			img {
+				width: 100%;
+			}
+		}
+	}
+	@include bp(smx) {
+		.package-content {
+			padding: 0 20px 0;
+			.btn-wrap {
+				margin-left: -20px;
+				margin-right: -20px;
+			}
+		}
+	}
+}
+.package-meta {
+	background-color: $secondary-color;
+	margin-bottom: 25px;
+	margin-left: 30px;
+	margin-right: 30px;
+	margin-top: -25px;
+	padding: 15px 0;
+	position: relative;
+	ul {
+		font-size: 0;
+		margin: 0;
+		padding: 0;
+		li {
+			[class*="fa-"] {
+				margin-right: 4px;
+			}
+			color: $light-color;
+			display: inline-block;
+			font-size: 13px;
+			line-height: 1.1;
+			padding: 0 12px;
+			position: relative;
+			&:before {
+				color: #BBBBBB;
+				content: "|";
+				line-height: 0.8;
+				position: absolute;
+				right: -3px;
+				top: 0;
+			}
+			&:first-child {
+				padding-left: 0;
+			}
+			&:last-child {
+				padding-right: 0;
+				&:before {
+					display: none;
+				}
+			}
+		}
+	}
+	@include bp(smx) {
+		margin-left: 10px;
+		margin-right: 10px;
+		margin-bottom: 20px;
+	}
+}
+.package-section {
+	&.bg-light-grey {
+		padding-top: 100px;
+		margin-top: 50px;
+		@include bp(lgx) {
+			padding-top: 70px;
+			margin-top: 0;
+		}
+		@include bp(smx) {
+			padding-top: 60px;
+		}
+	}
+}
+.package-inner-list {
+	.row {
+		margin: 0 -15px;
+		[class*="col-"] {
+			padding-left: 15px;
+			padding-right: 15px;
+		}
+	}
+	.package-wrap {
+		background-color: $light-color;
+		@include flexbox();
+		@include flex-wrap(wrap);
+		margin-bottom: 40px;
+		.feature-image,
+		.package-content {
+			width: 50%;
+		}
+		.package-price {
+			right: auto;
+			left: 0;
+		}
+		.package-meta {
+			margin: 0;
+			ul {
+				li {
+					[class*="fa-"] {
+						font-size: 10px;
+						margin-right: 2px;
+					}
+				}
+			}
+		}
+		.package-content {
+			padding-top: 30px;
+			@include flexbox();
+			@include flex-direction(column);
+			.btn-wrap {
+				margin-top: auto;
+			}
+		}
+	}
+	@include bp(smx) {
+		.package-wrap {
+			.feature-image,
+			.package-content {
+				width: 100%;
+			}
+		}
+	}
+}

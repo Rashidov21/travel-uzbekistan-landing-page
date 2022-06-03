@@ -1,0 +1,17 @@
+.client-section {
+	position: relative;
+	z-index: 9;
+}
+.client-wrap {
+	padding: 38px 0;
+	.client-item {
+		padding: 10px 35px;
+		text-align: center;
+	}
+	@include bp(smx) {
+		.client-item {
+			padding: 10px 20px;
+			text-align: center;
+		}
+	}
+}

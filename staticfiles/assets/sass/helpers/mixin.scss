@@ -1,0 +1,345 @@
+//=========================================//
+      // Rem with PX fallback //
+//=========================================//
+
+@mixin font-size($sizeValue: 16) {
+  font-size: ($sizeValue * 1) * 1px;
+}
+
+//=========================================//
+            // Center Block //
+//=========================================//
+
+@mixin center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+//=========================================//
+            // Clearfix //
+//=========================================//
+
+@mixin clearfix() {
+  &:before,
+  &:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}
+
+//=========================================//
+            // Placehoder //
+//=========================================//
+
+@mixin optional-at-root($sel) {
+  @at-root #{if(not &, $sel, selector-append(&, $sel))} {
+    @content;
+  }
+}
+
+@mixin placeholder {
+  @include optional-at-root('::-webkit-input-placeholder') {
+    @content;
+  }
+
+  @include optional-at-root(':-moz-placeholder') {
+    @content;
+  }
+
+  @include optional-at-root('::-moz-placeholder') {
+    @content;
+  }
+
+  @include optional-at-root(':-ms-input-placeholder') {
+    @content;
+  }
+}
+
+//=========================================//
+            // Opacity //
+//=========================================//
+
+@mixin opacity($value){
+  $IEValue: $value*100;
+  opacity: $value;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity="+$IEValue+")";
+  filter: alpha(opacity=$IEValue);
+}
+
+//=========================================//
+            // Background //
+//=========================================//
+
+@mixin background($property, $value){
+  -webkit-background-#{$property}: $value;
+     -moz-background-#{$property}: $value;
+      -ms-background-#{$property}: $value;
+       -o-background-#{$property}: $value;
+          background-#{$property}: $value;
+}
+
+//=========================================//
+            // width height calculation //
+//=========================================//
+
+@mixin calc($property, $expression) {
+  #{$property}: -moz-calc(#{$expression});
+  #{$property}: -webkit-calc(#{$expression});
+  #{$property}: calc(#{$expression});
+}
+
+//=========================================//
+            // Transform //
+//=========================================//
+@mixin transition-duration($time) {
+  -webkit-transition-duration: $time;
+     -moz-transition-duration: $time;
+      -ms-transition-duration: $time;
+       -o-transition-duration: $time;
+          transition-duration: $time;
+}
+
+@mixin transform ($args...) {
+  -webkit-transform: $args;
+     -moz-transform: $args;
+      -ms-transform: $args;
+       -o-transform: $args;
+          transform: $args;
+}
+
+// generic transform
+@mixin transform($transforms) {
+  -webkit-transform: $transforms;
+     -moz-transform: $transforms;
+      -ms-transform: $transforms;
+       -o-transform: $transforms;
+          transform: $transforms;
+}
+
+// rotate
+@mixin rotate ($deg) {
+  @include transform(rotate(#{$deg}deg));
+}
+ 
+// scale
+@mixin scale($scale) {
+   @include transform(scale($scale));
+} 
+
+// translate
+@mixin translate ($x, $y) {
+   @include transform(translate($x, $y));
+}
+
+// skew
+@mixin skew ($x, $y) {
+   @include transform(skew(#{$x}deg, #{$y}deg));
+}
+
+// transform origin
+@mixin transform-origin ($origin) {
+  -webkit-transform-origin: $origin;
+      moz-transform-origin: $origin;
+      -ms-transform-origin: $origin;
+       -o-transform-origin: $origin;
+          transform-origin: $origin;
+}
+
+//=========================================//
+            // Transition //
+//=========================================//
+
+@mixin transition ($args...) {
+  -webkit-transition: $args;
+     -moz-transition: $args;
+      -ms-transition: $args;
+       -o-transition: $args;
+          transition: $args;
+}
+
+//=========================================//
+            // Border Radius //
+//=========================================//
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+//=========================================//
+            // Box Sizing //
+//=========================================//
+
+@mixin box-sizing($args){
+  -webkit-box-sizing: $args;
+     -moz-box-sizing: $args;
+      -ms-box-sizing: $args;
+       -o-box-sizing: $args;
+          box-sizing: $args;
+}
+
+//=========================================//
+            // Box Shadow //
+//=========================================//
+
+@mixin box-shadow($args...) {
+  -webkit-box-shadow: $args;
+     -moz-box-shadow: $args;
+      -ms-box-shadow: $args;
+       -o-box-shadow: $args;
+          box-shadow: $args;
+}
+
+//=========================================//
+            // Filter //
+//=========================================//
+
+@mixin filter($args...){
+  -webkit-filter: $args;
+     -moz-filter: $args;
+      -ms-filter: $args;
+       -o-filter: $args;
+          filter: $args;
+}
+
+//=========================================//
+            // Blur //
+//=========================================//
+
+@mixin blur ($value) {
+   @include filter(blur(#{$value}px));
+}
+
+//=========================================//
+            // Class //
+//=========================================//
+
+@mixin boxify ($bg-clr:$light-color, $brd-clr:darken($light-color, 10%), $b-margin:30px, $t-b-padding:15px, $l-r-padding:30px){
+  background-color: $bg-clr;
+  border: 1px solid $brd-clr;
+  margin-bottom: $b-margin;
+  padding: $t-b-padding $l-r-padding;
+}
+
+//=========================================//
+            // Flex box //
+//=========================================//
+// Flexbox display
+@mixin flexbox() {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+} 
+
+@mixin inline-flex() {
+  display: -webkit-inline-box;
+  display: -moz-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+@mixin flex($values) {
+  -webkit-box-flex: $values;
+     -moz-box-flex: $values;
+      -webkit-flex: $values;
+          -ms-flex: $values;
+              flex: $values;
+}
+
+// Flex Flow Direction
+@mixin flex-direction($direction) {
+  -webkit-flex-direction: $direction;
+     -moz-flex-direction: $direction;
+      -ms-flex-direction: $direction;
+          flex-direction: $direction;
+}
+
+// Flex Line Wrapping
+@mixin flex-wrap($wrap) {
+  -webkit-flex-wrap: $wrap;
+     -moz-flex-wrap: $wrap;
+      -ms-flex-wrap: $wrap;
+          flex-wrap: $wrap;
+}
+
+// Flex Direction and Wrap
+@mixin flex-flow($flow) {
+  -webkit-flex-flow: $flow;
+     -moz-flex-flow: $flow;
+      -ms-flex-flow: $flow;
+          flex-flow: $flow;
+}
+
+// Display Order
+@mixin order($val) {
+  -webkit-box-ordinal-group: $val;  
+     -moz-box-ordinal-group: $val;     
+         -ms-flex-order: $val;     
+          -webkit-order: $val;  
+            order: $val;
+}
+
+// Flex grow factor
+@mixin flex-grow($grow) {
+  -webkit-flex-grow: $grow;
+     -moz-flex-grow: $grow;
+      -ms-flex-grow: $grow;
+          flex-grow: $grow;
+}
+
+// Flex shrink
+@mixin flex-shrink($shrink) {
+  -webkit-flex-shrink: $shrink;
+     -moz-flex-shrink: $shrink;
+      -ms-flex-shrink: $shrink;
+          flex-shrink: $shrink;
+}
+
+// Flex basis
+@mixin flex-basis($width) {
+  -webkit-flex-basis: $width;
+     -moz-flex-basis: $width;
+      -ms-flex-basis: $width;
+          flex-basis: $width;
+}
+
+// Axis Alignment
+@mixin justify-content($justify) {
+  -webkit-justify-content: $justify;
+     -moz-justify-content: $justify;
+      -ms-justify-content: $justify;
+          justify-content: $justify;
+            -ms-flex-pack: $justify;
+}
+
+// Packing Flex Lines
+@mixin align-content($align) {
+  -webkit-align-content: $align;
+     -moz-align-content: $align;
+      -ms-align-content: $align;
+          align-content: $align;
+}
+
+// Cross-axis Alignment
+@mixin align-items($align) {
+  -webkit-align-items: $align;
+     -moz-align-items: $align;
+      -ms-align-items: $align;
+       -ms-flex-align: $align;
+          align-items: $align;
+}
+
+// Cross-axis Alignment
+@mixin align-self($align) {
+  -webkit-align-self: $align;
+     -moz-align-self: $align;
+      -ms-align-self: $align;
+          align-self: $align;
+}

@@ -1,0 +1,63 @@
+.success-notify {
+	background-color: $secondary-color;
+	@include flexbox;
+	padding: 30px;
+	color: $light-color;
+	@include align-items(center);
+	@include border-radius(6px);
+	margin-bottom: 60px;
+	.success-icon {
+		i {
+			@include border-radius(100%);
+			border: 3px solid $light-color;
+			line-height: 80px;
+			height: 80px;
+			width: 80px;
+			text-align: center;
+			@include font-size(28);
+		}
+	}
+	.success-content {
+		margin-left: 20px;
+		h3 {
+			margin-bottom: 5px;
+			color: $light-color;
+		}
+		p {
+			margin-bottom: 0;
+		}
+	}
+}
+.confirmation-details {
+	h3 {
+		margin-bottom: 25px;
+	}
+	table {
+		margin-bottom: 60px;
+		tr {
+			&:nth-of-type(odd){
+				background-color: #F1F1F1;
+			}
+			td {
+				color: #383838;
+				width: 50%;
+				border: none;
+			}
+		}
+	}
+	.details {
+		&.payment-details {
+			margin-bottom: 60px;
+		}
+		.details-desc {
+			background-color: #F1F1F1;
+			padding: 15px;
+			a {
+				color: inherit;
+			}
+			p {
+				margin-bottom: 0;
+			}
+		}
+	}
+}

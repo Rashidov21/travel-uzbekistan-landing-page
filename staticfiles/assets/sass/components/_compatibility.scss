@@ -1,0 +1,243 @@
+// thumb image css
+.overlay-hover {
+	.thumb-img {
+		img {
+			@include scale(1.1);
+			@include transition(all 0.5s);
+		}
+	}
+	> a {
+		overflow: hidden;
+		&:hover {
+			.thumb-img  {
+				img {
+					@include scale(1);
+				}
+			}
+		}
+	}
+}
+
+// datepicker css
+.ui-datepicker {
+	background-color: $light-color;
+	@include border-radius(0px);
+	width: 280px;
+	&.ui-widget {
+		font-family: inherit;
+	}
+	.ui-datepicker-header {
+		background-color: transparent;
+		border: none;
+		border-bottom: 1px solid #e6e6e6;
+		padding: 10px 0 15px;
+		position: relative;
+	}
+	.ui-datepicker-title {
+		@include font-size(15);
+		line-height: 1.2;
+	}
+	.ui-datepicker-prev,
+	.ui-datepicker-next {
+		border: 1px solid transparent;
+		@include border-radius(100%);
+		line-height: 30px;
+		height: 30px;
+		width: 30px;
+		text-align: center;
+		top: 50%;
+		@include translate(0, -50%);
+		@include transition(all 0.3s linear);
+		span {
+			background-image: none;
+			@include font-size(0);
+			margin: 0;
+			height: auto;
+			position: static;
+			text-indent: inherit;
+			width: auto;
+			&:before {
+				@include font-size(13);
+				font-family: 'Font Awesome 5 Free';
+				font-weight: 900;
+			}
+		}
+		&.ui-state-hover {
+			background-color: $hover-color;
+			color: $light-color;
+		}
+	}
+	.ui-datepicker-prev {
+		span {
+			&:before {
+				content: "\f053";
+			}
+		}
+	}
+	.ui-datepicker-next {
+		span {
+			&:before {
+				content: "\f054";
+			}
+		}
+	}
+	table {
+		thead {
+			tr {
+				background-color: $light-color;
+				border-bottom: 1px solid #e6e6e6;
+				th {
+					color: $title-color;
+					font-weight: normal;
+					@include font-size(12);
+
+				}
+			}
+		}
+	}
+	.ui-datepicker-calendar {
+		tr {
+			td {
+				padding: 4px;
+				a {
+					background-color: transparent;
+					border: 1px solid transparent;
+					@include border-radius(100%);
+					@include font-size(12);
+					display: block;
+					line-height: 30px;
+					height: 30px;
+					padding: 0;
+					width: 30px;
+					text-align: center;
+					@include transition(background-color 0.4s, color 0.4s);
+					&:hover,
+					&:focus,
+					&:active {
+						background-color: $hover-color;
+						color: $light-color;
+					}
+					&.ui-state-highlight {
+						background-color: $primary-color;
+						color: $light-color;
+					}
+					&.ui-state-active {
+						background-color: $hover-color;
+						color: $light-color;
+					}
+				}
+			}
+		}
+	}
+}
+
+#slider-range {
+	&.ui-widget-content {
+		background-color: #e6e6e6;
+		border: none;
+		height: 6px;
+		margin-top: 20px;
+	}
+	.ui-widget-header {
+		background-color: $primary-color;
+
+	}
+	.ui-corner-all,
+	&.ui-widget-content {
+		@include border-radius(0px);
+	}
+	&.ui-slider-horizontal {
+		.ui-slider-handle {
+			margin-left: -1px; 
+			top: -6px;
+			@include border-radius(100%);
+		}
+	}
+}
+.ui-widget-content {
+	color: inherit;
+}
+// light box css
+.lb-data {
+	.lb-closeContainer {
+		position: absolute;
+		top: 5px;
+		right: 15px
+	}
+}
+
+// poup video css
+.modal-video {
+	background-color: rgba($dark-color, 0.9);
+	overflow: hidden;
+}
+.modal-video-movie-wrap {
+	position: static;
+}
+.modal-video-body {
+	padding: 0 15px;
+}
+.modal-video-movie-wrap {
+	border: 5px solid $light-color;
+}
+.modal-video-close-btn {
+	color: $light-color;
+	@include font-size(22);
+    top: 15px;
+    right: 18px;
+    overflow: inherit;
+    width: auto;
+    height: auto;
+    &:before {
+    	display: none;
+    }
+    &:after {
+    	background-color: transparent;
+    	margin: 0;
+    	top: 0;
+    	border-radius: 0px;
+    	content: "\f00d";
+    	font-weight: 900;
+    	font-family: "Font Awesome 5 Free";
+    	@include rotate(0);
+    }
+    .close {
+        @include font-size(34);
+        color: $light-color;
+        opacity: 1;
+        position: relative;
+    }
+    &:hover,
+    &:focus,
+    &:active {
+    	outline: 0;
+        &:after {
+            color: $hover-color;
+        }
+    }
+}
+
+.breadcrumb-content {
+	margin-bottom: 15px;
+	.breadcrumb {
+		background-color: transparent;
+		margin: 0;
+		padding: 0;
+		li {
+			list-style: none;
+			&.active {
+				a {
+					color: #383838;
+				}
+			}
+			a {
+				color: #767676;
+				font-size: 15px;
+				font-weight: 600;
+				&:hover {
+					color: $hover-color;
+				}
+			}
+		}
+	}
+}

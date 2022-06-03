@@ -1,0 +1,69 @@
+.vacancy-container {
+	padding-bottom: 60px;
+	.vacancy-form {
+		background-color: $secondary-color;
+		padding: 30px;
+		color: $light-color;
+		text-align: center;
+		h3 {
+			color: $light-color;
+		}
+		form {
+			text-align: left;
+			margin-top: 30px;
+			p {
+				margin-bottom: 20px;
+			}
+		}
+		input {
+			width: 100%;
+			&:not[type="submit"] {
+				height: 59px;
+			}
+		}
+	}
+	@include bp(lg){
+		.vacancy-form {
+			margin-left: 30px;
+		}
+	}
+}
+
+.vacancy-content {
+	margin-bottom: 30px;
+	padding: 40px;
+	border: 1px solid #D9D9D9;
+	h5 {
+		color: $secondary-color;
+		font-weight: 700;
+	}
+	.button-primary {
+		margin-top: 10px;
+	}
+}
+
+.vacancy-content-wrap {
+	[class*="col-"] {
+		&:first-child,
+		&:nth-child(4n+4),
+		&:nth-child(4n+5) {
+			.vacancy-content {
+				box-shadow: 0px 0px 13px -4px rgba(0,0,0,0.25);
+				border: none;
+			}
+		}
+	}
+}
+
+.carrer-page-section {
+	padding-bottom: 40px;
+	.section-disc {
+		@include bp(lg) {
+			margin-left: 50px;
+		}
+	}
+	.about-service {
+		border: 1px solid #D1D1D1;
+		padding: 18px 25px 22px 25px;
+	}
+}
