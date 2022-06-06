@@ -4244,7 +4244,7 @@ input[type=submit]:focus {
     position: relative;
 }
 
-.newsletter-form input[type=email] {
+.newsletter-form input[type=number] {
     background-color: transparent;
     border: 1px solid rgba(255, 255, 255, 0.61);
     color: #ffffff;
@@ -9813,6 +9813,9 @@ product checkout css
 @media screen and (max-width: 991px) {
     .sidebar {
         margin-top: 50px;
+    }
+    .activity-icon a img {
+        max-width: 30%;
     }
 }
 
