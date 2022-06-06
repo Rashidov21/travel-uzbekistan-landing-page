@@ -9836,5 +9836,11 @@ product checkout css
     }
 }
 
+#lang {
+    background-color: bisque;
+    padding: 5px;
+    color: black;
+}
+
 
 /*# sourceMappingURL=style.css.map *
