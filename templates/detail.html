@@ -1,0 +1,181 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- favicon -->
+    <link rel="icon" type="image/png" href="{% static 'assets/images/favicon.png' %}">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'assets/vendors/bootstrap/css/bootstrap.min.css' %}" media="all">
+    <!-- Fonts Awesome CSS -->
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/vendors/fontawesome/css/all.min.css' %}">
+    <!-- jquery-ui css -->
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/vendors/jquery-ui/jquery-ui.min.css' %}">
+    <!-- modal video css -->
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/vendors/modal-video/modal-video.min.css' %}">
+    <!-- light box css -->
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/vendors/lightbox/dist/css/lightbox.min.css' %}">
+    <!-- slick slider css -->
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/vendors/slick/slick.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/vendors/slick/slick-theme.css' %}">
+    <!-- google fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,400&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+    <title>Haj va Umra ziyoratlari </title>
+</head>
+
+<body class="home">
+
+    <div id="page" class="full-page">
+        <header id="masthead" class="site-header header-primary">
+            <!-- header html start -->
+            <div class="top-header">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 d-none d-lg-block">
+                            <div class="header-contact-info">
+                                <ul>
+                                    <li>
+                                        <a href="#"><i class="fas fa-phone-alt"></i> +99893 789 45 61</a>
+                                    </li>
+                                    <li>
+                                        <a href="mailto:info@Travel.com"><i class="fas fa-envelope"></i> travel@andijan.com</a>
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-map-marker-alt"></i> Buyuk Turon 21 , Andijan
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 d-flex justify-content-lg-end justify-content-between">
+                            <div class="header-social social-links">
+                                <ul>
+                                    <li><a href="#"><i class="fab fa-facebook-f" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-telegram" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
+                                </ul>
+                            </div>
+                            <div class="header-search-icon">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom-header">
+                <div class="container d-flex justify-content-between align-items-center">
+                    <div class="site-identity">
+                        <h1 class="site-title">
+                            <a href="index.html">
+                                <img src="{% static 'assets/images/travele-logo.png' %}" alt="logo">
+                            </a>
+                        </h1>
+                    </div>
+                    <div class="main-navigation d-none d-lg-block">
+                        <nav id="navigation" class="navigation">
+                            <ul>
+                                <li class="menu-item">
+                                    <a href="/">Bosh sahifa</a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="#">Turlar</a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="#">Top taklif</a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="#">Aloqa</a>
+                                </li>
+
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="header-btn">
+                        <select name="lang" id="lang">
+                            <option value="uz">Uzbek</option>
+                            <option value="ru">Russian</option>
+                            <option value="en">English</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="mobile-menu-container"></div>
+        </header>
+
+        <!-- MAIN CONTENT  -->
+        <main id="content" class="site-main">
+            <section class="destination-section">
+                <div class="container"></div>
+            </section>
+        </main>
+        <!-- MAIN CONTENT  -->
+
+        <footer id="colophon" class="site-footer footer-primary">
+
+            <div class="buttom-footer">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-md-5">
+                            <div class="footer-menu">
+                                <ul>
+                                    <li>
+                                        <a href="#">Buyurtma va Ariza namunalari</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Haj va Umra uchun kerakli hujjatlar</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-2 text-center">
+                            <div class="footer-logo">
+                                <a href="#"><img src="assets/images/travele-logo.png" alt=""></a>
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+                            <div class="copy-right text-right">Copyright © 2021 Travele. All rights reserveds</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <a id="backTotop" href="#" class="to-top-icon">
+            <i class="fas fa-chevron-up"></i>
+        </a>
+        <!-- custom search field html -->
+        <div class="header-search-form">
+            <div class="container">
+                <div class="header-search-container">
+                    <form class="search-form" role="search" method="get">
+                        <input type="text" name="s" placeholder="Enter your text...">
+                    </form>
+                    <a href="#" class="search-close">
+                        <i class="fas fa-times"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- header html end -->
+    </div>
+
+    <!-- JavaScript -->
+    <script src="{% static 'assets/js/jquery.js' %}"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+    <script src="{% static 'assets/vendors/bootstrap/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'assets/vendors/jquery-ui/jquery-ui.min.js' %}"></script>
+    <script src="{% static 'assets/vendors/countdown-date-loop-counter/loopcounter.js' %}"></script>
+    <script src="{% static 'assets/js/jquery.counterup.js' %}"></script>
+    <script src="{% static 'assets/vendors/modal-video/jquery-modal-video.min.js' %}"></script>
+    <script src="{% static 'assets/vendors/masonry/masonry.pkgd.min.js' %}"></script>
+    <script src="{% static 'assets/vendors/lightbox/dist/js/lightbox.min.js' %}"></script>
+    <script src="{% static 'assets/vendors/slick/slick.min.js' %}"></script>
+    <script src="{% static 'assets/js/jquery.slicknav.js' %}"></script>
+    <script src="{% static 'assets/js/custom.min.js' %}"></script>
+</body>
+
+</html>
