@@ -71,8 +71,8 @@
                 <div class="container d-flex justify-content-between align-items-center">
                     <div class="site-identity">
                         <h1 class="site-title">
-                            <a href="index.html">
-                                <img src="{% static 'assets/images/travele-logo.png' %}" alt="logo">
+                            <a href="/">
+                                <img src="{% static 'assets/images/logo.png' %}" alt="logo">
                             </a>
                         </h1>
                     </div>
@@ -83,13 +83,13 @@
                                     <a href="/">Bosh sahifa</a>
                                 </li>
                                 <li class="menu-item">
-                                    <a href="#">Turlar</a>
+                                    <a href="#tours">Turlar</a>
                                 </li>
                                 <li class="menu-item">
-                                    <a href="#">Top taklif</a>
+                                    <a href="#tarif">Tariflar</a>
                                 </li>
                                 <li class="menu-item">
-                                    <a href="#">Aloqa</a>
+                                    <a href="#contact">Aloqa</a>
                                 </li>
 
                             </ul>
@@ -140,7 +140,7 @@
             </section>
             <!-- slider html start -->
             <br>
-            <section class="destination-section">
+            <section class="destination-section" id="tours">
                 <div class="container">
                     <div class="section-heading">
                         <div class="row align-items-end">
@@ -150,7 +150,7 @@
                             </div>
                             <div class="col-lg-5">
                                 <div class="section-disc">
-                                    Aperiam sociosqu urna praesent, tristique, corrupti condimentum asperiores platea ipsum ad arcu. Nostrud. Aut nostrum, ornare quas provident laoreet nesciunt.
+                                    Makka va Madina yer yuzidagi eng aziz va muborak shaxarlardir. U yerda tarixlar afsonalarda toplangan, quyosh yil boyi porlab, tabiatning betakrorligi va odamlarning yuraklari tozaligi buning nishonasidir
                                 </div>
                             </div>
                         </div>
@@ -245,7 +245,7 @@
                 </div>
             </section>
             <!-- Home packages section html start -->
-            <section class="package-section">
+            <section class="package-section" id="tarif">
                 <div class="container">
                     <div class="section-heading text-center">
                         <div class="row">
@@ -261,7 +261,7 @@
                             <div class="col-lg-4 col-md-6">
                                 <div class="package-wrap">
                                     <figure class="feature-image">
-                                        <a href="#">
+                                        <a href="{% url 'main:detail' %}">
                                             <img src="{% static 'assets/images/365x305m.jpg' %}" alt="">
                                         </a>
                                     </figure>
@@ -286,7 +286,7 @@
                                         </div>
                                         <div class="package-content">
                                             <h3>
-                                                <a href="#">Haj ibodatini biz bilan ado eting.</a>
+                                                <a href="{% url 'main:detail' %}">Haj ibodatini biz bilan ado eting.</a>
                                             </h3>
                                             <div class="review-area">
                                                 <span class="review-text">(123 ko'rildi)</span>
@@ -306,7 +306,7 @@
                             <div class="col-lg-4 col-md-6">
                                 <div class="package-wrap">
                                     <figure class="feature-image">
-                                        <a href="#">
+                                        <a href="{% url 'main:detail' %}">
                                             <img src="{% static 'assets/images/mosquenabavi.jpg' %}" alt="">
                                         </a>
                                     </figure>
@@ -331,7 +331,7 @@
                                         </div>
                                         <div class="package-content">
                                             <h3>
-                                                <a href="#">Umra ziyorati uchun ajoyib narx</a>
+                                                <a href="{% url 'main:detail' %}">Umra ziyorati uchun ajoyib narx</a>
                                             </h3>
                                             <div class="review-area">
                                                 <span class="review-text">(193 ko'rildi)</span>
@@ -351,7 +351,7 @@
                             <div class="col-lg-4 col-md-6">
                                 <div class="package-wrap">
                                     <figure class="feature-image">
-                                        <a href="#">
+                                        <a href="{% url 'main:detail' %}">
                                             <img src="{% static 'assets/images/365x305uz.jpg' %}" alt="">
                                         </a>
                                     </figure>
@@ -376,7 +376,7 @@
                                         </div>
                                         <div class="package-content">
                                             <h3>
-                                                <a href="#">Ko'hna Samarqandni qaytadan kash qiling!.</a>
+                                                <a href="{% url 'main:detail' %}">Ko'hna Samarqandni qaytadan kash qiling!.</a>
                                             </h3>
                                             <div class="review-area">
                                                 <span class="review-text">(823 ko'rildi)</span>
@@ -749,7 +749,7 @@
             </div>
             <!-- testimonial html end -->
             <!-- Home contact details section html start -->
-            <section class="contact-section">
+            <section class="contact-section" id="contact">
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-4">
@@ -786,13 +786,13 @@
                                             </div>
                                             <ul>
                                                 <li>
-                                                    <a href="#">+132 (599) 254 669</a>
+                                                    <a href="#">+998 (90) 123 45 67</a>
                                                 </li>
                                                 <li>
-                                                    <a href="#">+123 (669) 255 587</a>
+                                                    <a href="#">+998 (90) 123 45 67</a>
                                                 </li>
                                                 <li>
-                                                    <a href="#">+01 (977) 2599 12</a>
+                                                    <a href="#">+998 (90) 123 45 67</a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -877,9 +877,9 @@
     <script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
     <script src="{% static 'assets/vendors/bootstrap/js/bootstrap.min.js' %}"></script>
     <script src="{% static 'assets/vendors/jquery-ui/jquery-ui.min.js' %}"></script>
-    <script src="{% static 'assets/vendors/countdown-date-loop-counter/loopcounter.js' %}"></script>
-    <script src="{% static 'assets/js/jquery.counterup.js' %}"></script>
-    <script src="{% static 'assets/vendors/modal-video/jquery-modal-video.min.js' %}"></script>
+
+
+
     <script src="{% static 'assets/vendors/masonry/masonry.pkgd.min.js' %}"></script>
     <script src="{% static 'assets/vendors/lightbox/dist/js/lightbox.min.js' %}"></script>
     <script src="{% static 'assets/vendors/slick/slick.min.js' %}"></script>

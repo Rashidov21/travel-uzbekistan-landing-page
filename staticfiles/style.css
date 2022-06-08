@@ -75,6 +75,7 @@
 html {
     line-height: 1.15;
     -webkit-text-size-adjust: 100%;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -9837,9 +9838,11 @@ product checkout css
 }
 
 #lang {
-    background-color: bisque;
+    background-color: #F56960;
     padding: 5px;
-    color: black;
+    color: white;
+    border: none;
+    border-radius: 5px;
 }
 
 

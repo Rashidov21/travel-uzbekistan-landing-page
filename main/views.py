@@ -8,4 +8,4 @@ def homePageView(request):
 
 
 def tourDetailPage(request):
-    return render(request, "index.html")
+    return render(request, "detail.html")

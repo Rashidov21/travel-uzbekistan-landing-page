@@ -15,8 +15,8 @@
     <link rel="stylesheet" type="text/css" href="{% static 'assets/vendors/fontawesome/css/all.min.css' %}">
     <!-- jquery-ui css -->
     <link rel="stylesheet" type="text/css" href="{% static 'assets/vendors/jquery-ui/jquery-ui.min.css' %}">
-    <!-- modal video css -->
-    <link rel="stylesheet" type="text/css" href="{% static 'assets/vendors/modal-video/modal-video.min.css' %}">
+
+
     <!-- light box css -->
     <link rel="stylesheet" type="text/css" href="{% static 'assets/vendors/lightbox/dist/css/lightbox.min.css' %}">
     <!-- slick slider css -->
@@ -34,7 +34,7 @@
     <div id="page" class="full-page">
         <header id="masthead" class="site-header header-primary">
             <!-- header html start -->
-            <div class="top-header">
+            <div class="top-header bg-info">
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-8 d-none d-lg-block">
@@ -67,12 +67,12 @@
                     </div>
                 </div>
             </div>
-            <div class="bottom-header">
+            <div class="bottom-header bg-info">
                 <div class="container d-flex justify-content-between align-items-center">
                     <div class="site-identity">
                         <h1 class="site-title">
-                            <a href="index.html">
-                                <img src="{% static 'assets/images/travele-logo.png' %}" alt="logo">
+                            <a href="/">
+                                <img src="{% static 'assets/images/logo.png' %}" alt="logo">
                             </a>
                         </h1>
                     </div>
@@ -83,13 +83,13 @@
                                     <a href="/">Bosh sahifa</a>
                                 </li>
                                 <li class="menu-item">
-                                    <a href="#">Turlar</a>
+                                    <a href="/#tour">Turlar</a>
                                 </li>
                                 <li class="menu-item">
-                                    <a href="#">Top taklif</a>
+                                    <a href="/#tarif">Tariflar</a>
                                 </li>
                                 <li class="menu-item">
-                                    <a href="#">Aloqa</a>
+                                    <a href="/#contact">Aloqa</a>
                                 </li>
 
                             </ul>
@@ -108,59 +108,225 @@
         </header>
 
         <!-- MAIN CONTENT  -->
-        <main id="content" class="site-main">
-            <section class="destination-section">
-                <div class="container"></div>
-            </section>
-        </main>
-        <!-- MAIN CONTENT  -->
-
-        <footer id="colophon" class="site-footer footer-primary">
-
-            <div class="buttom-footer">
-                <div class="container">
-                    <div class="row align-items-center">
-                        <div class="col-md-5">
-                            <div class="footer-menu">
-                                <ul>
-                                    <li>
-                                        <a href="#">Buyurtma va Ariza namunalari</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Haj va Umra uchun kerakli hujjatlar</a>
-                                    </li>
-                                </ul>
-                            </div>
+        <br><br>
+        <br><br><br>
+        <main id="content" class="site-main mt-5">
+            <section class="destination-section mt-5">
+                <div class="container mt-5">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-8">
+                            <h2>Umra Ziyorati</h2>
+                            <h3><strong>10 kunlik dastur quidagilarni o'z ichiga oladi:</strong></h3>
+                            <h4>
+                                Madina hamda Makka shaharlariga tashrif buyurgan ziyoratchilarimiz 10 kunlik dastur davomida 4 kun Madina hamda 6 kun Makka shaharlarida mehmonhona xizmatlaridan foydalanadilar.
+                            </h4>
+                            <ul>
+                                <li>al-Haram masjididan uzoqlik masofasi: 50 metrdan 1500 metrgacha</li>
+                                <li>Mehmonxonalar shinam 5 va 5 yulduzli bo'lib unda ziyoratchilar uchun barcha sharoitlar mavjud.</li>
+                                <li>Yotoqxona: 3 va 4 kishi uchun mo'ljallangan bo'lib alohida alohida yotoq krovatlaridan iborat.</li>
+                                <li>Umumiy ovqatlanish zali.</li>
+                                <li>Hammom hamda Xojatxona (shampun,sovun,sochiq,fen va boshqa gigienik vositalar).</li>
+                                <li>Konditsioner.</li>
+                                <li>Muzlatgich.</li>
+                                <li>Televizor.</li>
+                                <li>Internet tarmog'iga ulanish uchun bepul Wifi.</li>
+                                <li>Lift va boshqa xizmatlarni o'z ichiga oladi.</li>
+                            </ul>
                         </div>
-                        <div class="col-md-2 text-center">
-                            <div class="footer-logo">
-                                <a href="#"><img src="assets/images/travele-logo.png" alt=""></a>
-                            </div>
+                        <div class="col-sm-12 col-md-4">
+                            <img src="{% static 'assets/images/mosquenabavi.jpg' %}" class="img-responsive m-1" alt="">
                         </div>
-                        <div class="col-md-5">
-                            <div class="copy-right text-right">Copyright © 2021 Travele. All rights reserveds</div>
+                        <div class="col-sm-12 col-md-4">
+                            <img src="{% static 'assets/images/365x305m.jpg' %}" class="img-responsive m-1" alt="">
+                        </div>
+                        <div class="col-sm-12 col-md-8 mt-2">
+                            <h4>
+                                Boshqa qulayliklar.
+                            </h4>
+                            <ul>
+                                <li>Saudia Arabistoni Umra vizasi</li>
+                                <li>Shved uslubidagi ertalabki nonushtalar hamda O'zbek milliy taomlari.</li>
+                                <li>Ziyoratchilar safar davomida mehmonxona restoranida shved uslubida ertalabki nonushtalarni, tanovul qilishlari hamda O'zbek milliy taomlaridan kechqurungi ovqatlanishda tanovul qilishlari mumkin bo'ladi.</li>
+                                <li>
+                                    <strong>Aviachiptalar</strong>
+                                    <p>Aviakompaniya qatnovlariga qarab:</p>
+                                    <ul>
+                                        <li>Bevosita Toshkent shahridan Jidda shahriga</li>
+                                        <li>Toshkent shahridan Dubay shahri orqali Madina shahriga</li>
+                                        <li>Toshkent shahridan Istanbul shahri orqali Madina shahriga uchishlari mumkin</li>
+                                    </ul>
+                                    <em>Izoh: Dubay hamda Istanbul shaharlari orqali uchilganda&nbsp;ziyoratchilarni shahar tashqarisiga chiqishlari taqiqlanadi.</em>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-12 col-md-8">
+                            <h4>
+                                Qo'shimcha qulayliklar
+                            </h4>
+                            <ul>
+                                <li>Malakali ellikboshi xizmati.</li>
+                                <li>Ziyoratchilar Umra safari davomida tajribali ellikboshi hamda gid ekskursavod xizmatlaridan foydalanadilar.</li>
+                                <li>
+                                    <strong>Ziyorat davomida ziyoratchilar</strong>
+                                    <p>Madina shahrida ziyorat qilinadigan joylar:</p>
+                                    <ul>
+                                        <li>Uhud tog'i</li>
+                                        <li>Masjid al-Qiblatayin</li>
+                                        <li>Qubo masjidi</li>
+                                        <li>Jannat al-Baqi qabristoni</li>
+                                        <li>Madina shahri </li>
+                                    </ul>
+
+                                </li>
+                                <li>
+                                    <strong>Madina shahrida ziyorat qilinadigan joylar:</strong>
+                                    <ul>
+                                        <li>Jabbal al-Savr tog'i</li>
+                                        <li>Hiro g'ori</li>
+                                        <li>Arofat tog'i</li>
+                                        <li> Mino hamda Muzdalifa vodiysi</li>
+                                        <li>Jamorot(shaytonga tosh otadigan joy) </li>
+                                        <li>Jin masjidi </li>
+                                    </ul>
+
+                                </li>
+                            </ul>
+
+                        </div>
+                        <div class="col-sm-12 col-md-4">
+                            <img src="{% static 'assets/images/322x555medina.jpg' %}" class="img-responsive m-1" alt="">
+                        </div>
+                        <div class="col-sm-12 mt-2">
+                            <strong>Izoh: to'lovlar O'zbekiston Respublikasi markaziy bank kursi bo'yicha O'zbekiston milliy valyutasida qabul qilinadi.</strong>
+                        </div>
+                    </div>
+
+
+                </div>
+
+    </div>
+    </section>
+    </main>
+    <main>
+        <section>
+            <div class="container">
+                <div class="step-section booking-section">
+                    <div class="container">
+                        <div class="step-link-wrap">
+                            <h2>Joy bronlashtirish</h2>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-8 right-sidebar">
+                                <!-- step one form html start -->
+                                <div class="booking-form-wrap">
+                                    <div class="booking-content">
+                                        <div class="form-title">
+                                            <span><i class="fas fa-user"></i></span>
+                                            <h3>Shaxsiy ma'lumotlar</h3>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-6">
+                                                <div class="form-group">
+                                                    <label>Ism*</label>
+                                                    <input type="text" class="form-control" name="firstname_booking">
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <div class="form-group">
+                                                    <label>Familya*</label>
+                                                    <input type="text" class="form-control" name="lastname_booking">
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <div class="form-group">
+                                                    <label>Manzil*</label>
+                                                    <input type="text" class="form-control" name="lastname_booking">
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <div class="form-group">
+                                                    <label>Telefon*</label>
+                                                    <input type="text" class="form-control" name="lastname_booking">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-policy">
+                                        <a href="#" class="button-primary">Bronlashtirish</a>
+                                    </div>
+                                </div>
+                                <!-- step one form html end -->
+                            </div>
+                            <div class="col-lg-4">
+                                <aside class="sidebar">
+
+                                    <div class="widget-bg widget-support-wrap">
+                                        <div class="icon">
+                                            <i class="fas fa-phone-volume"></i>
+                                        </div>
+                                        <div class="support-content">
+                                            <h5>YORDAM UCHUN</h5>
+                                            <a href="telto:12345678" class="phone">+998901234567</a>
+                                            <small>Dushanba - Shanba 9.00 - 17.30pm</small>
+                                        </div>
+                                    </div>
+                                </aside>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </footer>
-        <a id="backTotop" href="#" class="to-top-icon">
-            <i class="fas fa-chevron-up"></i>
-        </a>
-        <!-- custom search field html -->
-        <div class="header-search-form">
+        </section>
+    </main>
+    <!-- MAIN CONTENT  -->
+
+    <footer id="colophon" class="site-footer footer-primary">
+
+        <div class="buttom-footer">
             <div class="container">
-                <div class="header-search-container">
-                    <form class="search-form" role="search" method="get">
-                        <input type="text" name="s" placeholder="Enter your text...">
-                    </form>
-                    <a href="#" class="search-close">
-                        <i class="fas fa-times"></i>
-                    </a>
+                <div class="row align-items-center">
+                    <div class="col-md-5">
+                        <div class="footer-menu">
+                            <ul>
+                                <li>
+                                    <a href="#">Buyurtma va Ariza namunalari</a>
+                                </li>
+                                <li>
+                                    <a href="#">Haj va Umra uchun kerakli hujjatlar</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-2 text-center">
+                        <div class="footer-logo">
+                            <a href="#"><img src="assets/images/travele-logo.png" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="copy-right text-right">Copyright © 2021 Travele. All rights reserveds</div>
+                    </div>
                 </div>
             </div>
         </div>
-        <!-- header html end -->
+    </footer>
+    <a id="backTotop" href="#" class="to-top-icon">
+        <i class="fas fa-chevron-up"></i>
+    </a>
+    <!-- custom search field html -->
+    <div class="header-search-form">
+        <div class="container">
+            <div class="header-search-container">
+                <form class="search-form" role="search" method="get">
+                    <input type="text" name="s" placeholder="Enter your text...">
+                </form>
+                <a href="#" class="search-close">
+                    <i class="fas fa-times"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- header html end -->
     </div>
 
     <!-- JavaScript -->
@@ -177,5 +343,7 @@
     <script src="{% static 'assets/js/jquery.slicknav.js' %}"></script>
     <script src="{% static 'assets/js/custom.min.js' %}"></script>
 </body>
+
+</html>
 
 </html>
